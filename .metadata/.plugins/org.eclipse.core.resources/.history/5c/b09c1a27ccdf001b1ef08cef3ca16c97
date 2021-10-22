@@ -1,0 +1,9 @@
+
+public class Windows10OS implements OS{
+
+	@Override
+	public void print() {
+		System.out.println("Sedan");
+	}
+
+}

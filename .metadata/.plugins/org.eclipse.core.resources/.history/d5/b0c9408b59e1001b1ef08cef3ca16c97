@@ -1,0 +1,67 @@
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollBar;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public  class TextPad implements TextArea{
+	//JFrame frame = null;
+	static JFrame frame = new JFrame("frame");
+	static JPanel panel = new JPanel();
+	static JTextArea textArea = new JTextArea();
+	static JScrollBar sb1  = new JScrollBar();
+	static JButton button = new JButton("Exit");
+	
+	String description = "Text Pad";
+	
+	public TextPad() {
+		//frame = new JFrame("frame");
+		
+		
+		
+		System.out.println(frame.hashCode());
+		//initFrame();
+		
+		
+	}
+	
+	
+	
+	public String getDescription() {
+		return description;
+	}
+	
+	public void initFrame() {
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setBounds(500,500,500,500);
+//		JPanel panel = new JPanel();
+//		JScrollBar sb1  = new JScrollBar();
+//		JButton button = new JButton("Exit");
+		button.addActionListener(e->frame.dispose());
+	
+	//Font  f1  = new Font(Font.SERIF, Font.PLAIN,  50);
+
+	Color  red  = new Color(255, 0, 0);
+	
+	
+	textArea.setColumns(20);
+	//textArea.setToolTipText("<html><b><font color=red>"
+    //        + "Please enter some text here" + "</font></b></html>");
+	
+	
+	textArea.setForeground(red);
+	
+	
+	panel.add(textArea);
+	panel.add(button);
+	frame.add(panel);
+	//frame.pack();
+	frame.setVisible(true);
+	}
+
+	
+}

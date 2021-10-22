@@ -1,0 +1,7 @@
+
+public class AppleM1Chip implements Processor {
+	@Override
+	public void getProcessor() {
+		return "AppleM1Chip";
+	}
+}

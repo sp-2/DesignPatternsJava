@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class PlayGame {
+public static void main(String[] args) {
+		
+		List<String[][]> o =new ArrayList<>();
+		
+		String [][] board  ={ {"ee","bk","ee","bq","ee","ee","bk","ee"},
+							  {"bp","bp","bp","bp","bp","bp","bp","bp"},
+							  {"ee","ee","ee","ee","ee","ee","ee","ee"},
+							  {"ee","ee","ee","ee","ee","ee","ee","ee"},
+							  {"ee","ee","ee","ee","ee","ee","ee","ee"},
+							  {"ee","ee","ee","ee","ee","ee","ee","ee"},
+							  {"wp","wp","wp","wp","wp","wp","wp","wp"},
+							  {"ee","wk","ee","wq","ee","ee","wk","ee"}};
+		
+		
+		
+		for(int i = 0; i< 8; i++) {
+			for(int j = 0; j< 8; j++) {		
+				System.out.print(board[i][j]+" ");
+			}
+			System.out.println();
+		}
+		
+}
+}

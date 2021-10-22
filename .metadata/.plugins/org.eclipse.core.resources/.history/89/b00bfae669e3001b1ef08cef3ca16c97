@@ -1,0 +1,15 @@
+
+public class FahrenheitAdapter implements CelsiusTemperature{
+
+	FahrenheitTemperature fahrenheitTemperature;
+	
+	public FahrenheitAdapter(FahrenheitTemperature fahrenheitTemperature) {
+		this.fahrenheitTemperature = fahrenheitTemperature;
+	}
+	
+	@Override
+	public void getCelsiusNormalBodyTemperature() {
+		// TODO Auto-generated method stub
+		fahrenheitTemperature.getFahrenheitNormalBodyTemperature();
+	}
+}

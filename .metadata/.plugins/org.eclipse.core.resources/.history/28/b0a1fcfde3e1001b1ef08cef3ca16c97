@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class PlayGame {
+public static void main(String[] args) {
+		
+		List<String[][]> o =new ArrayList<>();
+		
+		String [][] board  ={ {"ee","ee","ee","ee","ee","ee","ee","ee"},
+							  {"ee","ee","ee","ee","ee","ee","ee","ee"},
+							  {"ee","ee","ee","ee","ee","ee","ee","ee"},
+							  {"ee","ee","ee","ee","ee","ee","ee","ee"},
+							  {"ee","ee","ee","ee","ee","ee","ee","ee"},
+							  {"ee","ee","ee","ee","ee","ee","ee","ee"},
+							  {"ee","ee","ee","ee","ee","ee","ee","ee"},
+							  {"ee","ee","ee","ee","ee","ee","ee","ee"}};
+		
+		
+		
+		
+		
+}
+}

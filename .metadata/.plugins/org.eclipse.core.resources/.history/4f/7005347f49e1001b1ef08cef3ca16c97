@@ -1,0 +1,8 @@
+
+public class ScratchPad {
+	public ScratchPad(String description) {
+		super();
+		this.description = description;
+	}
+	
+}

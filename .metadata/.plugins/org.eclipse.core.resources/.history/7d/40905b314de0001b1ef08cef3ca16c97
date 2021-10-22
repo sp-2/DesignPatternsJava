@@ -1,0 +1,17 @@
+
+public class DellLaptop extends Laptop{
+
+	LaptopFactory laptopFactory;
+	
+	public DellLaptop(LaptopFactory laptopFactory) {
+		this.laptopFactory = laptopFactory;
+	}
+	
+	 void assembleLaptop() {
+		 name 		= "Dell Inspiron";
+		 processor 	= laptopFactory.createProcessor();
+		 os   		= laptopFactory.createOS();
+		 memory 	= laptopFactory.createMemory();
+	     screen 	= laptopFactory.createScreen();
+	 }	 
+}

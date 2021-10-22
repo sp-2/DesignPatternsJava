@@ -1,0 +1,26 @@
+
+public class TestClass2 {
+//	//Lazy Loading
+//	SingletonDesignPatternLazyLoading singleInstance3 = SingletonDesignPatternLazyLoading.getInstance();
+//	SingletonDesignPatternLazyLoading singleInstance4 = SingletonDesignPatternLazyLoading.getInstance();
+//			
+//	System.out.println(singleInstance3);
+//	System.out.println(singleInstance4);
+//	
+//	//Thread safe Lazy Loading
+//	SingletonDesignPatternThreadSafeLazyLoading singleInstance5 = SingletonDesignPatternThreadSafeLazyLoading.getInstance();
+//	SingletonDesignPatternThreadSafeLazyLoading singleInstance6 = SingletonDesignPatternThreadSafeLazyLoading.getInstance();
+//			
+//	System.out.println(singleInstance5);
+//	System.out.println(singleInstance6);
+	
+	
+	
+	
+	//Lazy loading with 2 threads
+	MyThread t1 = new MyThread();
+	t1.start();
+	
+	MyThread t2 = new MyThread();
+	t2.start();
+}

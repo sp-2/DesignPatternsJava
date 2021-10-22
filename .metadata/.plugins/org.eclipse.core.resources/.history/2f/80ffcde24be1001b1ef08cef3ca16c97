@@ -1,0 +1,38 @@
+import client.DataSorter;
+import client.DataSorterA;
+import client.DataSorterB;
+import strategy.MergeSort;
+import strategy.QuickSortLomuto;
+import strategy.SelectionSort;
+import strategy.Sort;
+
+public class TestClass {
+	public static void main(String[] args) {
+		
+		TextPad spA = new ScratchPad();
+		Sort ms = new MergeSort();
+		Sort ss = new SelectionSort();
+		
+		//pass sorting strategy to the constructor
+		DataSorter dsA = new DataSorterA(qsl);
+		
+		DataSorter dsB = new DataSorterB(ms);
+			
+		dsA.setData(arr1);
+		dsA.printData();
+		dsA.sortData();
+		dsA.printData();
+		
+		dsB.setData(arr2);
+		dsB.printData();
+		dsB.sortData();
+		dsB.printData();
+		
+		dsA.setData(arr3);
+		dsA.printData();
+		//change sorting strategy
+		dsA.setSortStrategy(ss);
+		dsA.sortData();
+		dsA.printData();
+	}
+}

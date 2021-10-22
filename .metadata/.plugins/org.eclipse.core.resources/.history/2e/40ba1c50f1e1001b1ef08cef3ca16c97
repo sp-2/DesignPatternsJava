@@ -1,0 +1,8 @@
+
+public class ChessGame {
+	GameState gameState;
+	
+	public ChessGame() {
+		
+	}
+}

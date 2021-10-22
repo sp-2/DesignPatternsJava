@@ -1,0 +1,12 @@
+
+public class MacBookAirLaptopStore extends LaptopStore{
+	protected  Laptop createLaptop() {
+		Laptop laptop = null;
+		
+		LaptopFactory macBookAirFactory = new macBookAirFactory();
+		
+		laptop = new MacBookAirLaptop(macBookAirFactory);
+		
+		return laptop;
+	}
+}

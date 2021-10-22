@@ -1,0 +1,25 @@
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
+public class SingletonWithSerialization {
+	public static void main(String[] args) throws IOException {
+		Class singleton = SingletonDesignPatternEagerLoading.class;
+		SingletonDesignPatternEagerLoading singleInstance = SingletonDesignPatternEagerLoading.getInstance();
+		
+		System.out.println(singleInstance);
+		
+		//serialization
+		FileOutputStream fos = new FileOutputStream("a.txt");
+		ObjectOutputStream oos = new ObjectOutputStream(fos);
+		
+		oos.writeObject(singleInstance);
+		
+		//deserialization
+				FileOutputStream fos = new FileOutputStream("a.txt");
+				ObjectOutputStream oos = new ObjectOutputStream(fos);
+		//System.out.println(singleInstance1);
+	}
+}

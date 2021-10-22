@@ -1,0 +1,5 @@
+import StockExchangeSubject;
+
+public class Nasdaq extends StockExchangeSubject{
+
+}

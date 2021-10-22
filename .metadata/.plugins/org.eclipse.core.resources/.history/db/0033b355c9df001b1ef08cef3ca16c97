@@ -1,0 +1,7 @@
+
+public interface LaptopFactory {
+	Processor createProcessor();
+	Processor createProcessor();
+	Processor createProcessor();
+	Processor createProcessor();
+}

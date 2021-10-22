@@ -1,0 +1,42 @@
+package strategy;
+
+public class SelectionSort implements Sort{
+
+	@Override
+	public void sort(int[] arr) {
+		selectionSort(arr);
+	}
+	
+	public static int[] selectionSort(int[] items) {
+		
+		for(int i=0; i < items.length-1; i++) {
+			int minIdx = i;
+			
+			for(int j=i+1; j < items.length; j++) {
+				if(items[j] < items[minIdx]) {
+					minIdx = j;
+				}
+			}
+			
+			if(minIdx!=i) {swap(items, i, minIdx);}
+		}
+		
+		return items;
+	}
+
+	public static void swap(int[] items, int firstIndex, int secondIndex) {
+		 int temp           = items[firstIndex];
+		 items[firstIndex]  = items[secondIndex];
+		 items[secondIndex] = temp;
+	}
+	
+	public static void main(String[] args) {
+		int[] items = {2,88,22,67,0, 1};
+		int[] sol = selectionSort(items);
+		
+		for(int i = 0; i< sol.length; i++) {
+			System.out.print(sol[i]+" ");
+		}
+	}
+
+}

@@ -1,0 +1,8 @@
+
+public class SingletonDesignPatternEagerLoadingWithSer implements {
+	private static SingletonDesignPatternEagerLoadingWithSer singleInstance = new SingletonDesignPatternEagerLoadingWithSer();
+	
+	public static SingletonDesignPatternEagerLoadingWithSer getInstance() {
+		return singleInstance;
+	}
+}

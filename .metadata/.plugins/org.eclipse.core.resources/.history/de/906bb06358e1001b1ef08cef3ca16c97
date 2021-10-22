@@ -1,0 +1,22 @@
+import java.awt.Color;
+import java.awt.Font;
+
+public class WithItalics extends TextDecorator{
+	TextPad textpad;
+	
+	public WithItalics(TextPad textpad) {
+		this.textpad = textpad;
+		System.out.println("-="+this.textpad.frame.hashCode());
+		Font  f  = new Font(Font.SERIF, Font.BOLD,  50);
+		Font  f1  = new Font(Font.SERIF,  Font.ITALIC, 15);
+		this.textpad.textArea.setFont(f1);
+		this.textpad.textArea.setForeground(Color.gray);
+		//this.textpad.frame.setVisible(true);
+	}
+	
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return "Italics";
+	}
+}

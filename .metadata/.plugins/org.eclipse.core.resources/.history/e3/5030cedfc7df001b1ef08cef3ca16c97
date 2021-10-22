@@ -1,0 +1,10 @@
+
+public class SedanFactory extends CarFactory{
+
+	@Override
+	protected Car makeCar() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

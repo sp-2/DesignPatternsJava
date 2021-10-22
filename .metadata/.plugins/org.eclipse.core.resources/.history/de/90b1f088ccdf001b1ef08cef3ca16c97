@@ -1,0 +1,9 @@
+
+public class RAM8GB implements Memory {
+
+	@Override
+	public void print() {
+		System.out.println("RAM16GB");
+	}
+
+}

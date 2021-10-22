@@ -1,0 +1,7 @@
+
+public interface LaptopFactory {
+	Processor createProcessor();
+	OS createOS();
+	Screen createScreen();
+	Memory createMemory();
+}

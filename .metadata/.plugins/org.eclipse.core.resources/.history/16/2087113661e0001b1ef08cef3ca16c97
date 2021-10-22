@@ -1,0 +1,21 @@
+
+public class TestClass {
+
+	public static void main(String[] args) {
+		//Eager Loading
+		SingletonDesignPatternEagerLoading singleInstance1 = SingletonDesignPatternEagerLoading.getInstance();
+		SingletonDesignPatternEagerLoading singleInstance2 = SingletonDesignPatternEagerLoading.getInstance();
+		
+		System.out.println(singleInstance1);
+		System.out.println(singleInstance2);
+		
+		//Eager Loading
+		SingletonDesignPatternEagerLoading singleInstance1 = SingletonDesignPatternEagerLoading.getInstance();
+				SingletonDesignPatternEagerLoading singleInstance2 = SingletonDesignPatternEagerLoading.getInstance();
+				
+				System.out.println(singleInstance1);
+				System.out.println(singleInstance2);
+		
+	}
+
+}

@@ -1,0 +1,92 @@
+
+public class BubbleSort {
+
+/*
+ * 
+Bubble sort is a simple sorting algorithm. 
+It works by repeatedly stepping through the list to be sorted, comparing 
+each pair of adjacent items and swapping them if they are in the wrong order. 
+The pass through the list is repeated until no swaps are needed, which indicates 
+that the list is sorted. Because it only uses comparisons to operate on elements, 
+it is a comparison sort.
+stable , in place, O(1) additional memory
+ * Performance
+
+Worst case performance: O(n2)
+Best case performance: O(n) sorted list
+Average case performance: O(n2)
+Worst case space complexity: O(n) total, O(1) auxiliary
+Bubble sort is not a practical sorting algorithm when n is large.
+5 2 3 4 1, only 2 ele are out of place, but
+takes n-1 passes to put 1 in right place, 
+1 to put 5, good if larger ele is down but bad is smaller is a t the end
+
+ */
+	public static void swap(int[] items, int firstIndex, int secondIndex) {
+		 int temp = items[firstIndex];
+		 items[firstIndex] = items[secondIndex];
+		 items[secondIndex] = temp;
+		}
+
+	public static int[] bubbleSort2(int[] items) {
+		
+		int len = items.length - 1;
+		boolean isSorted = false;
+		//for(int i=1; i < items.length-1; i++) {
+		while(!isSorted) {
+			isSorted=true;
+			for(int j=0; j < len ; j++) { //(n-1) + (n-2) +..+1 = n(n-1)/2 compares
+				if(items[j] > items[j+1]) {
+					swap(items, j, j+1);
+					isSorted=false;
+				}
+			}
+			len--;
+		}
+		return items;
+		}
+	
+		public static int[] bubbleSort1(int[] items) {
+				
+		int len = items.length;
+		for(int i=0; i < items.length-1; i++) {
+			for(int j=0; j < len - 1 - i; j++) {
+				if(items[j] > items[j+1]) {
+					swap(items, j, j+1);
+				}
+			}
+		}
+		return items;
+		}
+		
+		
+		public static int[] bubbleSort(int[] items) {
+
+			  int len = items.length;
+
+			  for (int i = 0; i < len; i++) {
+			    for (int j = 0, stop = len - i; j < stop - 1; j++) {
+			      if (items[j] > items[j + 1]) {
+			        swap(items, j, j + 1);
+			      }
+			    }
+			  }
+
+			  return items;
+			}
+
+
+		
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		int[] items = {2,88,22,67,0};
+		int[] sol = bubbleSort2(items);
+		
+		for(int i = 0; i< sol.length; i++) {
+			System.out.print(sol[i]+" ");
+		}
+	}
+
+}

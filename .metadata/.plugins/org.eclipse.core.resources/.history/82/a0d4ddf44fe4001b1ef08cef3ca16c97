@@ -1,0 +1,12 @@
+import javax.swing.JTextArea;
+
+public abstract class TextDecorator extends TextPad{
+	//TextPad textpad;
+	
+	public abstract String getDescription();
+	public JTextArea getJTextArea() {
+		//System.out.println("indeco super.getJTextArea() "+super());
+		System.out.println("indeco super.getJTextArea() "+super.getJTextArea());
+		return super.getJTextArea();
+	}
+}

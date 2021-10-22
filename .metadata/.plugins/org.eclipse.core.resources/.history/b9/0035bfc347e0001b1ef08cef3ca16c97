@@ -1,0 +1,18 @@
+
+public abstract class Laptop {
+	String    name;
+	Processor processor;
+	OS        os;
+	Memory    memory;
+	Screen    screen;
+	
+	abstract void assembleLaptop();
+	
+	public void details() {
+		System.out.print("Name: "+ name);
+		System.out.print("Name: "+ processor);
+		System.out.print("Name: "+ os);
+		System.out.print("Name: "+ memory);
+		System.out.print("Name: "+ name);
+	}
+}

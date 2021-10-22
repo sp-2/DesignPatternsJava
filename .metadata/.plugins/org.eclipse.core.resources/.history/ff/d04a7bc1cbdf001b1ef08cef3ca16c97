@@ -1,0 +1,10 @@
+
+public class RAM16GB implements Memory {
+
+	@Override
+	public void print() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

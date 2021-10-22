@@ -1,0 +1,9 @@
+
+public class SinglePatternEagerLoading {
+
+		private static SinglePatternEagerLoading singleInstance = new SinglePatternEagerLoading();
+		
+		public static SinglePatternEagerLoading getInstance() {
+			return singleInstance;
+		}
+}

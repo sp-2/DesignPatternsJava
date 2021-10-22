@@ -1,0 +1,13 @@
+
+public class MacBookAirLaptop extends Laptop{
+	
+	
+	 void assembleLaptop() {
+		     name;
+			Processor processor;
+			OS        os;
+			Memory    memory;
+			Screen    screen;
+	 }
+	 
+}

@@ -1,0 +1,19 @@
+import java.awt.Color;
+
+public class MakeTextBlue extends TextDecorator{
+	//TextPad textpad;
+	
+	public MakeTextBlue(TextPad textpad) {
+		this.textpad = textpad;
+		System.out.println("-"+textpad.frame.hashCode());
+		Color  red  = new Color(255, 0, 0);
+		textpad.frame.setName("deci");
+		textpad.frame.getComponent(0).setForeground(red);
+		textpad.frame.setVisible(true);
+	}
+	
+	@Override
+	public String getDescription() {
+		return "Blue Text";
+	}
+}

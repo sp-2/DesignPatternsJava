@@ -1,0 +1,32 @@
+package factory;
+import IntelCorei5;
+import Memory;
+import OS;
+import Processor;
+import RAM8GB;
+import Screen;
+import TouchScreen;
+import products.Windows10OS;
+
+public class DellFactory implements LaptopFactory{
+
+	@Override
+	public Processor createProcessor() {
+		return new IntelCorei5();
+	}
+
+	@Override
+	public OS createOS() {
+		return new Windows10OS();
+	}
+
+	@Override
+	public Screen createScreen() {
+		return new TouchScreen();
+	}
+
+	@Override
+	public Memory createMemory() {
+		return new RAM8GB();
+	}
+}

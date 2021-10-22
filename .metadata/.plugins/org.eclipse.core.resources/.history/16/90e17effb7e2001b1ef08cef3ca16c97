@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+public abstract class StockExchangeSubject {
+
+		List<Observer> observers = null;
+		StockData StockData = null;
+		
+		public StockExchangeSubject() {
+			observers = new ArrayList<Observer>();
+		}
+		
+		public void subscribe(Observer observer) {
+			observers.add(observer);
+		}
+		
+		public void unSubscribe(Observer observer) {
+			observers.remove(observer);
+		}
+		
+		public void notify() {
+			for(Observer observer: observers) {
+				observer.update("IO");
+			}
+		}
+}

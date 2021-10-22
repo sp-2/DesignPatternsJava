@@ -1,0 +1,32 @@
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Fidelity {
+	Map<String,List<StockData>> stockDataMap = null;
+	List<StockData> stockDataList = null;
+	
+	public Fidelity() {
+		stockDataMap = new HashMap<>();
+	}
+	
+	public void update(List<StockData> stockDataList) {
+		for(StockData stockData: stockDataList) {
+			String symbol = stockData.getSymbol();
+			List<StockData> listSymbol = null;
+			if(stockDataMap.containsKey(symbol)){
+				listSymbol = stockDataMap.get(symbol);
+			}
+			listSymbol.add(stockData);
+		}
+		
+		stockDataList = stockDataList;
+	}
+	
+	public void updateAll() {
+		System.out.print("Symbol Name Price Volume";
+		for(StockData stockData: stockDataList) {
+			System.out.print(stockData.getSymbol()+" "+stockData.getName()+" "+stockData.getValue()+" "+stockData.getVolume());
+		}
+	}
+}

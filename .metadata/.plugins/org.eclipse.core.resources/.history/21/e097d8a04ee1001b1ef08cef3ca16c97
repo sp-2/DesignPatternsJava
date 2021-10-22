@@ -1,0 +1,11 @@
+
+
+public class TestClass {
+	public static void main(String[] args) {
+		
+		TextPad spA = new ScratchPad("Scratch Pad A");
+		
+		spA = new MakeTextBlue(spA);
+		
+	}
+}

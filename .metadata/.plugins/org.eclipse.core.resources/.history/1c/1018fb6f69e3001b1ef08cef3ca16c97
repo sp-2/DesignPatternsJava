@@ -1,0 +1,9 @@
+
+public class UKTemperature implements CelsiusTemperature{
+
+	@Override
+	public double getCelsiusTemperature(double kelvin) {
+		return kelvin - 273.15;
+	}
+
+}

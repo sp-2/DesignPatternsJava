@@ -1,0 +1,14 @@
+
+public class MakeTextBlue extends TextDecorator{
+//	TextPad textpad;
+//	public TextDecorator(TextPad textpad) {
+//		this.textpad = textpad;
+//	}
+	
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return "Blue Text";
+	}
+
+}

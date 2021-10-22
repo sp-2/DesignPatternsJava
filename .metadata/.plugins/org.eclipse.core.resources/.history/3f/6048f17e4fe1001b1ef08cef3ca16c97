@@ -1,0 +1,76 @@
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollBar;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public  class TextPad implements TextArea{
+	JFrame frame = null;
+	String description = "Text Pad";
+	
+	public TextPad() {
+		frame = new JFrame("frame");
+		
+		
+		
+		initFrame();
+		
+		
+	}
+	
+	public String getDescription() {
+		return description;
+	}
+	
+	public void initFrame() {
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setBounds(500,500,500,500);
+		JPanel panel = new JPanel();
+		JScrollBar sb1  = new JScrollBar();
+		JButton button = new JButton("Exit");
+		button.addActionListener(e->frame.dispose());
+	
+//	Font  f1  = new Font(Font.SERIF, Font.PLAIN,  50);
+//	Font  f2  = new Font(Font.SANS_SERIF,  Font.BOLD, 10);
+//	Font  f4  = new Font(Font.DIALOG_INPUT,  Font.BOLD|Font.ITALIC, 15);
+//	
+//	Font  f11  = new Font(Font.SERIF, Font.PLAIN|Font.ITALIC,  10);
+//	Color  green   = new Color(0, 255,  0);
+//	Color  blue   = new Color(0, 0, 255);
+//	Color  red  = new Color(255, 0, 0);
+	
+	
+	//frame.add(sb1);
+	//Font  f12  = new Font(Font.BOLD);
+	//Font.BOLD
+	JTextArea textArea = new JTextArea();
+	textArea.setColumns(20);
+	textArea.setToolTipText("<html><b><font color=red>"
+            + "Please enter some text here" + "</font></b></html>");
+	
+	//textField.setForeground(Color.BLUE);
+		//textField.setBackground(Color.YELLOW);
+	//textArea.setHorizontalAlignment(JTextField.CENTER);
+	//frame.add(textField);
+	//textArea.setFont(f4);
+	//textArea.setFont(f1);
+	//textArea.setForeground(red);
+	
+	//JLabel label = new JLabel("Enter your text: ");
+	
+	panel.add(textArea);
+	panel.add(button);
+	panel.add(sb1);
+	frame.add(panel);
+	//label.setFont(f2);
+	//label.setForeground(fg);
+	frame.pack();
+	frame.setVisible(true);
+	}
+
+	
+}

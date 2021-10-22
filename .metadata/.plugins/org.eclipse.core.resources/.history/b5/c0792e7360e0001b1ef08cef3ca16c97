@@ -1,0 +1,8 @@
+
+public class SingletonDesignPatternEagerLoading {
+	private static SinglePatternEagerLoading singleInstance = new SinglePatternEagerLoading();
+	
+	public static SinglePatternEagerLoading getInstance() {
+		return singleInstance;
+	}
+}

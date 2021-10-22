@@ -1,0 +1,10 @@
+
+public class TouchScreen implements Screen{
+
+	@Override
+	public void print() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

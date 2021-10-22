@@ -1,0 +1,17 @@
+import client.DataSorter;
+import client.DataSorterA;
+import client.DataSorterB;
+import strategy.MergeSort;
+import strategy.QuickSortLomuto;
+import strategy.SelectionSort;
+import strategy.Sort;
+
+public class TestClass {
+	public static void main(String[] args) {
+		
+		TextPad spA = new ScratchPad("Scratch Pad A");
+		
+		spA = new WithItalics(spA);
+		
+	}
+}

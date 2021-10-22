@@ -1,0 +1,16 @@
+import java.awt.Color;
+
+public class WithItalics extends TextDecorator{
+	TextPad textpad;
+	
+	public WithItalics(TextPad textpad) {
+		this.textpad = textpad;
+		textpad.frame.getComponent(0).setFont()
+	}
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return "Italics";
+	}
+
+}

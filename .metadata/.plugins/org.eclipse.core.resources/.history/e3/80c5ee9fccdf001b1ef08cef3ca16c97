@@ -1,0 +1,8 @@
+
+public class GBRAM implements Memory{
+
+	@Override
+	public void print() {
+		System.out.println("GBRAM");
+	}
+}

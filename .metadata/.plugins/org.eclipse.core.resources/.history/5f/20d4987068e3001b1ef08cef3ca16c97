@@ -1,0 +1,13 @@
+
+public class FahrenheitAdapter implements CelsiusTemperature{
+
+	FahrenheitTemperature FahrenheitTemperature;
+	
+	public FahrenheitAdapter()
+	@Override
+	public double getCelsiusTemperature(double kelvin) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

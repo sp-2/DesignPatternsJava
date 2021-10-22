@@ -1,0 +1,6 @@
+
+public abstract class TextDecorator extends TextPad{
+
+	
+	public abstract String getDescription();
+}

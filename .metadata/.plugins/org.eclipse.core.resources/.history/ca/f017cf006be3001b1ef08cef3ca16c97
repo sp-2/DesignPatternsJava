@@ -1,0 +1,24 @@
+
+public class TestClass {
+
+	
+	public static void main(String[] args) {
+		UKTemperature ukTemperature = new UKTemperature();
+		
+		USTemperature usTemperature = new USTemperature();
+		
+		//wrap usTemperature in a FahrenheitAdapter
+		
+		CelsiusTemperature fahrenheitAdapter = new FahrenheitAdapter(usTemperature);
+		
+		System.out.print("In the UK:");
+		testTemp(ukTemperature);
+
+		testTemp(fahrenheitAdapter);
+		
+	}
+	
+	static void testTemp(CelsiusTemperature celsiusTemperature) {
+		celsiusTemperature.getCelsiusNormalBodyTemperature();
+	}
+}

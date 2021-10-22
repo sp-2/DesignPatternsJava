@@ -1,0 +1,9 @@
+
+public class AppleM1Chip implements Processor {
+
+	@Override
+	public void print() {
+		System.out.println("Sedan");
+	}
+
+}

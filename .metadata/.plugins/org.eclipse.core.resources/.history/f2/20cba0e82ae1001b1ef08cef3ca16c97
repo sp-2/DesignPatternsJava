@@ -1,0 +1,12 @@
+package strategy;
+
+import strategy.DataSorter;
+import strategy.Sort;
+
+public class DataSorterB extends DataSorter{
+
+	public DataSorterB(Sort sort) {
+		super(sort);
+	}
+
+}

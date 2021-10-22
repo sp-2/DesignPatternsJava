@@ -1,0 +1,57 @@
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+
+public class TsetClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StockExchangeSubject nasdaq = new Nasdaq();
+		Fidelity fidelity = new Fidelity();
+		nasdaq.subscribe(fidelity);
+		List<StockData> stockDataList = new ArrayList<StockData>(); 
+		StockData stockData = new StockData("Apple","AAPL", 142.0, 100000.0, LocalDateTime.now());
+		stockDataList.add(stockData);
+		stockData = new StockData("Apple","AAPL", 142.0, 100000.0, LocalDateTime.now());
+		stockDataList.add(stockData);
+		stockData = new StockData("Stamps","STMP", 320.2, 420000.0, LocalDateTime.now());
+		stockDataList.add(stockData);
+		stockData = new StockData("NRX Pharm","NRXP", 142.0, 339952.0, LocalDateTime.now());
+		stockDataList.add(stockData);
+		stockData = new StockData("Gevo","GEVO", 6.77, 1127000.0, LocalDateTime.parse("2015-02-20T06:30:00"));
+		stockDataList.add(stockData);
+		stockData = new StockData("Disney","DIS", 160.0, 227000.0, LocalDateTime.now());
+		stockDataList.add(stockData);
+		nasdaq.setData(stockDataList);
+		
+		stockDataList.clear();
+		 stockData = new StockData("Apple","AAPL", 122.0, 100000.0, LocalDateTime.now());
+		stockDataList.add(stockData);
+		stockData = new StockData("Apple","AAPL", 142.0, 100000.0, LocalDateTime.now());
+		stockDataList.add(stockData);
+		stockData = new StockData("Stamps","STMP", 320.2, 420000.0, LocalDateTime.now());
+		stockDataList.add(stockData);
+		stockData = new StockData("NRX Pharm","NRXP", 142.0, 339952.0, LocalDateTime.now());
+		stockDataList.add(stockData);
+		stockData = new StockData("Gevo","GEVO", 6.77, 1127000.0, LocalDateTime.parse("2015-02-20T06:30:00"));
+		stockDataList.add(stockData);
+		stockData = new StockData("Disney","DIS", 160.0, 227000.0, LocalDateTime.now());
+		stockDataList.add(stockData);
+		nasdaq.setData(stockDataList);
+		
+		try {
+		      File myObj = new File("filename.txt");
+		      Scanner myReader = new Scanner(myObj);
+		      while (myReader.hasNextLine()) {
+		        String data = myReader.nextLine();
+		        System.out.println(data);
+		      }
+		      myReader.close();
+		    } catch (FileNotFoundException e) {
+		      System.out.println("An error occurred.");
+		      e.printStackTrace();
+		    }
+		  }
+	}
+
+}

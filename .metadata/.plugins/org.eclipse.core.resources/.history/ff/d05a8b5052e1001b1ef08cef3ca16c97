@@ -1,0 +1,6 @@
+
+public abstract class TextDecorator implements TextArea{
+	//TextPad textpad;
+	
+	public abstract String getDescription();
+}

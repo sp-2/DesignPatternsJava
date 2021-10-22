@@ -1,0 +1,10 @@
+
+public class UKTemperature implements CelsiusTemperature{
+
+	@Override
+	public double getCelsiusNormalBodyTemperature() {
+		System.out.print("Normal body temperature is: 37 degrees celsius");
+		return kelvin - 273.15;
+	}
+
+}

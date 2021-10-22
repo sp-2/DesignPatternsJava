@@ -1,0 +1,4 @@
+
+public interface TextArea {
+	String getDesciption();
+}

@@ -1,0 +1,10 @@
+
+public class MyThread extends Thread{
+	
+	public void run() {
+		Thread.sleep(1000);
+		SingletonDesignPatternLazyLoading singleInstance3 = SingletonDesignPatternLazyLoading.getInstance();
+		System.out.println(singleInstance3);
+	}
+
+}

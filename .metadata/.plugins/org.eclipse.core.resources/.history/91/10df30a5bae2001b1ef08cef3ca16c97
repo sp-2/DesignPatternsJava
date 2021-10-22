@@ -1,0 +1,23 @@
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Fidelity {
+	Map<String,List<StockData>> stockDataMap = null;
+	
+	public Fidelity() {
+		stockDataMap = new HashMap<>();
+	}
+	
+	public void update(List<StockData> StockDataList) {
+		for(StockData StockData: StockDataList) {
+			String symbol = StockData.getSymbol();
+			if(stockDataMap.containsKey(StockData.getSymbol()){
+				List<StockData> listSymbol = stockDataMap.get(symbol);
+				listSymbol.add(StockData);
+			}
+
+			//stockDataMap.put(StockData.getSymbol(), value)
+		}
+	}
+}

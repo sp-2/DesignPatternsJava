@@ -1,0 +1,6 @@
+package factory;
+import Car;
+
+public abstract class CarFactory {
+	public abstract Car makeCar();
+}

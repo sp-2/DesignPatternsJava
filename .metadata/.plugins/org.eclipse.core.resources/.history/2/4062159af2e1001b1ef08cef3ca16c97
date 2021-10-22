@@ -1,0 +1,38 @@
+
+public class ChessGame {
+	GameState gameState;
+	
+	public ChessGame() {
+		this.gameState.board  = initGame();
+		this.gameState.player = "Player1";
+	}
+
+	private String [][] initGame() {
+		String [][] board  ={ {"br","bk","bb","bq","bK","bb","bk","br"},
+				  			  {"bp","bp","bp","bp","bp","bp","bp","bp"},
+				  			  {"--","--","--","--","--","--","--","--"},
+				  			  {"--","--","--","--","--","--","--","--"},
+				  			  {"--","--","--","--","--","--","--","--"},
+				  			  {"--","--","--","--","--","--","--","--"},
+				  			  {"wp","wp","wp","wp","wp","wp","wp","wp"},
+				  			  {"wr","wk","wb","wq","wK","wb","wk","wr"}};
+		return board;
+	}
+	
+	public void makeMove(int r, int c, String piece, String player) {
+		//check if move is valid
+		//if valid
+			setBoard(int r, int c, String piece);
+			setPlayer(String player);
+			//checkIfWin();
+		//else indicate invalid move
+	}
+	public void setBoard(int r, int c, String piece, String player) {
+		this.gameState.board  = initGame();
+		this.gameState.player = "Player1";
+	}
+	public void setPlayer(String player) {
+		this.gameState.board  = initGame();
+		this.gameState.player = player;
+	}
+}

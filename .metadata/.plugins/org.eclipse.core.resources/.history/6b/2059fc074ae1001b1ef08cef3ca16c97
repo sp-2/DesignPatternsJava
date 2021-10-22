@@ -1,0 +1,14 @@
+
+public class WithItalics extends TextDecorator{
+	TextPad textpad;
+	
+	public WithItalics(TextPad textpad) {
+		this.textpad = textpad;
+	}
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return "Italics";
+	}
+
+}

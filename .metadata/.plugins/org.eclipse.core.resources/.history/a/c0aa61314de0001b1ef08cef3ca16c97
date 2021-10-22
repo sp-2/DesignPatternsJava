@@ -1,0 +1,11 @@
+import Memory;
+import OS;
+import Processor;
+import Screen;
+
+public interface LaptopFactory {
+	Processor createProcessor();
+	OS createOS();
+	Screen createScreen();
+	Memory createMemory();
+}

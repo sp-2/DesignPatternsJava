@@ -1,0 +1,15 @@
+import java.awt.*;
+import javax.swing.*;
+
+
+import java.awt.I
+import javax.imageio.*;
+import java.io.*;
+
+import java.awt.event.*;
+
+public class Test {
+public static void main(String[] args) {
+	JFrame frame = new JFrame("frame");
+}
+}

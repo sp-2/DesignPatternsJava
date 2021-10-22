@@ -1,0 +1,7 @@
+
+public abstract class TextDecorator extends TextPad{
+	TextPad textpad;
+	public TextDecorator(TextPad textpad) {
+		this.textpad = textpad;
+	}
+}

@@ -1,0 +1,4 @@
+
+public class IntelCorei5 implements Processor{
+
+}

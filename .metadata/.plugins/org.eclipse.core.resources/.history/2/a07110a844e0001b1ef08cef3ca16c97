@@ -1,0 +1,8 @@
+
+public abstract class Laptop {
+	String name;
+	Processor processor;
+	OS os;
+	Memeory memory;
+	Screen screen;
+}

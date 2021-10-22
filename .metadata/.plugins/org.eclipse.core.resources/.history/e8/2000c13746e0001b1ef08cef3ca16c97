@@ -1,0 +1,7 @@
+
+public class DellLaptopStore extends LaptopStore{
+	protected  Laptop createLaptop() {
+		
+	}
+	
+}

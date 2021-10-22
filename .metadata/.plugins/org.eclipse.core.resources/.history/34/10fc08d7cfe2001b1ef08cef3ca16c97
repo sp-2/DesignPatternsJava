@@ -1,0 +1,105 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class TsetClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String[] info;
+  	  	String name;
+  	  	String symbol;
+  	  	Double price;
+  	  	Double volume;
+		StockExchangeSubject nasdaq = new Nasdaq();
+		Fidelity fidelity = new Fidelity();
+		nasdaq.subscribe(fidelity);
+		List<StockData> stockDataList = new ArrayList<StockData>();
+		
+//		StockData stockData = new StockData("Apple","AAPL", 142.0, 100000.0, LocalDateTime.now());
+//		stockDataList.add(stockData);
+//		stockData = new StockData("Apple","AAPL", 142.0, 100000.0, LocalDateTime.now());
+//		stockDataList.add(stockData);
+//		stockData = new StockData("Stamps","STMP", 320.2, 420000.0, LocalDateTime.now());
+//		stockDataList.add(stockData);
+//		stockData = new StockData("NRX Pharm","NRXP", 142.0, 339952.0, LocalDateTime.now());
+//		stockDataList.add(stockData);
+//		stockData = new StockData("Gevo","GEVO", 6.77, 1127000.0, LocalDateTime.parse("2015-02-20T06:30:00"));
+//		stockDataList.add(stockData);
+//		stockData = new StockData("Disney","DIS", 160.0, 227000.0, LocalDateTime.now());
+//		stockDataList.add(stockData);
+//		nasdaq.setData(stockDataList);
+//		
+//		stockDataList.clear();
+//		 stockData = new StockData("Apple","AAPL", 122.0, 100000.0, LocalDateTime.now());
+//		stockDataList.add(stockData);
+//		stockData = new StockData("Apple","AAPL", 142.0, 100000.0, LocalDateTime.now());
+//		stockDataList.add(stockData);
+//		stockData = new StockData("Stamps","STMP", 320.2, 420000.0, LocalDateTime.now());
+//		stockDataList.add(stockData);
+//		stockData = new StockData("NRX Pharm","NRXP", 142.0, 339952.0, LocalDateTime.now());
+//		stockDataList.add(stockData);
+//		stockData = new StockData("Gevo","GEVO", 6.77, 1127000.0, LocalDateTime.parse("2015-02-20T06:30:00"));
+//		stockDataList.add(stockData);
+//		stockData = new StockData("Disney","DIS", 160.0, 227000.0, LocalDateTime.now());
+//		stockDataList.add(stockData);
+//		nasdaq.setData(stockDataList);
+//		stockDataList.clear();
+		
+		try {
+		      File file = new File("/Users/sp/Desktop/DesignPatterns/ObserverDesignPattern/src/data");
+		      Scanner scanner = new Scanner(file);
+//		      String[] info;
+//	    	  String name;
+//	    	  String symbol;
+//	    	  Double price;
+//	    	  Double volume;
+	    	  
+		      while (scanner.hasNextLine()) {
+		    	  
+		        String data = scanner.nextLine();
+
+		         info = data.split(",");
+		        
+		         if(info.length==1) {nasdaq.setData(stockDataList);stockDataList.clear(); continue;}
+		         name = info[0];
+		         symbol = info[1];
+		         price = Double.parseDouble(info[2]);
+		         volume = Double.parseDouble(info[3]);
+		         
+		         stockData = new StockData(name,symbol, price, volume, LocalDateTime.now());
+		         stockDataList.add(stockData);
+		       // System.out.println(data);
+		      }
+		      scanner.close();
+		    } catch (FileNotFoundException e) {
+		      System.out.println("An error occurred.");
+		      e.printStackTrace();
+		    }
+		  }
+	}
+
+
+/*
+try{
+String nextLine;
+String title = "";
+String department = "";
+int year;
+
+BufferedReader inFile = new BufferedReader(new FileReader(inputName));
+
+while((nextLine = inFile.readLine())!= null){
+
+  title = nextLine.nextLine();
+  department = nextLine.nextLine();
+  year = Integer.parseInt(nextLine);
+  newList.addCourse(new Course(title, department, year));  
+} 
+
+inFile.close();
+}
+*/

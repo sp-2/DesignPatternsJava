@@ -1,0 +1,45 @@
+
+public class ManualCar {
+	public void start() {
+		System.out.println("Starting manual car");
+		System.out.println("Ensure gear in Nuetral");
+		System.out.println("Push brake down");
+		System.out.println("Turn on ignition");
+		System.out.println("Started car...");
+	}
+	
+	public void startMovingForward() {
+		System.out.println("Change gear to D");
+		System.out.println("Release brake");
+		System.out.println("Car moving forward...");
+		accelerate();
+	}
+	
+	public void reverse() {
+		System.out.println("Change gear to Reverse");
+		System.out.println("Press gas pedal");
+		System.out.println("Car reversing...");
+	}
+	
+	public void accelerate() {
+		System.out.println("Pressing gas pedal to accelerate");
+		System.out.println("Car accelerating...");
+	}
+	
+	public void decelerate() {
+		System.out.println("Releasing gas pedal to decelearte");//check brake or gas?
+		System.out.println("Car slowing down...");
+	}
+	
+	public void stop() {
+		System.out.println("Push brake down");
+		System.out.println("Car has come to a stop...");
+	}
+	
+	public void park() {
+		System.out.println("Push brake down");
+		System.out.println("Set gear to Park");
+		System.out.println("Turn off ignition");
+		System.out.println("Car is parked...");
+	}
+}

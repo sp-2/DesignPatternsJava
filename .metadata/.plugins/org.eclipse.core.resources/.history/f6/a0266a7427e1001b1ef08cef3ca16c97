@@ -1,0 +1,18 @@
+package strategy;
+//client uses sorting algorithms interchangeably
+public abstract class DataSorter {
+	Sort sort;
+	int[] data;
+	
+	public DataSorter(Sort sort) {
+		this.sort = sort;
+	}
+	
+	public void setSortStrategy(Sort sort) {
+		this.sort = sort;
+	}
+	
+	public void setData(int[] data) {
+		this.sort = sort;
+	}
+}

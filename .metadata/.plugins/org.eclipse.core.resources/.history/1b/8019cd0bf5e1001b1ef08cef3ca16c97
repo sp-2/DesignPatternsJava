@@ -1,0 +1,10 @@
+
+public class GameState {
+	String[][] board;
+	String player;
+	
+	public GameState(String[][] board, String player) {
+		this.board = board;
+		this.player = player;
+	}
+}

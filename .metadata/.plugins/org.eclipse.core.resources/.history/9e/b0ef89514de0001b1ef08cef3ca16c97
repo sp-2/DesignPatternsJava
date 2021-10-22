@@ -1,0 +1,14 @@
+import factory.LaptopFactory;
+import factory.MacBookAirFactory;
+
+public class MacBookAirLaptopStore extends LaptopStore{
+	protected  Laptop createLaptop() {
+		Laptop laptop = null;
+		
+		LaptopFactory macBookAirFactory = new MacBookAirFactory();
+		
+		laptop = new MacBookAirLaptop(macBookAirFactory);
+		
+		return laptop;
+	}
+}

@@ -1,0 +1,11 @@
+
+public class ScratchPad extends TextPad{
+	String description = "Scratch Pad";
+	public ScratchPad() {
+		//super();
+		//this.description = description;
+	}
+	public String getDescription() {
+		return description;
+	}
+}

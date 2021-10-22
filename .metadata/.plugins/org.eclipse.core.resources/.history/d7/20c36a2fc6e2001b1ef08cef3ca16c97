@@ -1,0 +1,23 @@
+"Apple","AAPL", 142.0, 100000.0
+		
+		"Apple","AAPL", 142.0, 100000.0
+		
+		"Stamps","STMP", 320.2, 420000.0
+		
+		"NRX Pharm","NRXP", 142.0, 339952.0
+		
+		"Gevo","GEVO", 6.77, 1127000.0, LocalDateTime.parse("2015-02-20T06:30:00"));
+		
+		"Disney","DIS", 160.0, 227000.0
+
+		"Apple","AAPL", 122.0, 100000.0
+		
+		"Apple","AAPL", 142.0, 100000.0
+		
+		"Stamps","STMP", 320.2, 420000.0
+		
+		"NRX Pharm","NRXP", 142.0, 339952.0
+		
+		"Gevo","GEVO", 6.77, 1127000.0
+		
+		"Disney","DIS", 160.0, 227000.0

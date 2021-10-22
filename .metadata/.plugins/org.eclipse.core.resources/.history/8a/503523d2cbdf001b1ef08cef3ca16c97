@@ -1,0 +1,10 @@
+
+public class IntelCorei5 implements Processor{
+
+	@Override
+	public void print() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,38 @@
+import java.awt.*;
+import javax.swing.*;
+
+
+//import java.awt.I
+//import javax.imageio.*;
+//import java.io.*;
+
+import java.awt.event.*;
+
+public class Test {
+public static void main(String[] args) {
+	JFrame frame = new JFrame("frame");
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	frame.setBounds(500,500,500,500);
+	
+	Container contentPane = frame.getContentPane();
+//	JPanel panel = new JPanel();
+	JButton button = new JButton("Button");
+	button.setBorderPainted(true);
+	button.setBounds(510, 510, 20, 20);
+	//frame.add(panel);
+	//frame.add(button);
+	contentPane.add(button);
+	JLabel label = new JLabel("QWE");
+	contentPane.add(label);
+	Font  f1  = new Font(Font.SERIF, Font.PLAIN,  10);
+	Font  f2  = new Font(Font.SANS_SERIF,  Font.BOLD, 10);
+	Font  f4  = new Font(Font.DIALOG_INPUT,  Font.BOLD|Font.ITALIC, 15);
+	JTextField textField = new JTextField();
+	
+	contentPane.add(textField);
+	//label.setFont(f2);
+	label.setFont(f1);
+	//label.setForeground(fg);
+	frame.setVisible(true);
+}
+}

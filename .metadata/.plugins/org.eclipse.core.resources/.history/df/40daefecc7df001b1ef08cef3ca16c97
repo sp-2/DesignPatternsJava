@@ -1,0 +1,7 @@
+
+public class CompactFactory extends CarFactory {
+	@Override
+	protected Car makeCar() {
+		return new Compact();
+	}
+}

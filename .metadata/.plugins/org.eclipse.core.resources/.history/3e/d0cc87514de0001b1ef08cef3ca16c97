@@ -1,0 +1,18 @@
+package client;
+import DellLaptop;
+import Laptop;
+import LaptopStore;
+import factory.DellFactory;
+import factory.LaptopFactory;
+
+public class DellLaptopStore extends LaptopStore{
+	protected  Laptop createLaptop() {
+		Laptop laptop = null;
+		
+		LaptopFactory dellFactory = new DellFactory();
+		
+		laptop = new DellLaptop(dellFactory);
+		
+		return laptop;
+	}
+}

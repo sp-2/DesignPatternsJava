@@ -1,0 +1,19 @@
+import java.io.FileInputStream;
+import java.io.FilterInputStream;
+
+public class TestClass {
+	public static void main(String[] args) {
+		
+		TextPad spA = new TextPad();
+		spA.initFrame();
+		//spA = new MakeTextBlue(spA);
+		//spA = new MakeTextBold(spA);
+		//spA = new AddPinkBackGround(spA);
+		
+		spA = new AddPinkBackGround(new MakeTextBold(new MakeTextBlue(spA)));
+		
+	//	FileInputStream ff= new FileInputStream();
+		FilterInputStream ff= new FilterInputStream();
+		LineNumberInputStream ff= new LineNumberInputStream();
+	}
+}

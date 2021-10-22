@@ -1,0 +1,24 @@
+package strategy;
+
+public class TestClass {
+	public static void main(String[] args) {
+		int[] arr1 = {8, 7, 6, 6, 6, 5, -1, 11, -11, -2, 2, 2, 1};
+		int[] arr2 = {8, 7, 6, 6, 6, 5, -1, 11, -11, -2, 2, 2, 1};
+		int[] arr3 = {8, 7, 6, 6, 6, 5, -1, 11, -11, -2, 2, 2, 1};
+		
+		Sort qsl = new QuickSortLomuto();
+		Sort qs2 = new SelectionSort();
+		
+		DataSorter dsA = new DataSorterA(qsl);
+		
+		DataSorter dsB = new DataSorterB(qs2);
+			
+		dsA.setData(arr1);
+		dsA.printData();
+		dsA.sortData();
+		dsA.printData();
+		
+		
+		
+	}
+}

@@ -1,0 +1,14 @@
+
+public class Test {
+
+	public static void swap(Integer i, Integer j) {
+		Integer temp = new Integer(i);
+		i = j;
+		j = temp;
+	   }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

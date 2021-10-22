@@ -1,0 +1,10 @@
+
+public class AppleM1Chip implements Processor {
+
+	@Override
+	public void print() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

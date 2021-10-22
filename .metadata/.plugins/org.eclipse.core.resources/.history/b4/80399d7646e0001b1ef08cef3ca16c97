@@ -1,0 +1,12 @@
+
+public class DellLaptopStore extends LaptopStore{
+	protected  Laptop createLaptop() {
+		Laptop laptop = null;
+		
+		LaptopFactory dellFactory = new DellFactory();
+		
+		aptop = new DellLaptop();
+		return laptop;
+	}
+	
+}

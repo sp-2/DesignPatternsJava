@@ -1,0 +1,14 @@
+package client;
+import Car;
+import factory.CarFactory;
+import factory.SedanFactory;
+
+public class CarTestDrive {
+
+	public static void main(String[] args) {
+		CarFactory carFactory = new SedanFactory();
+		Car		   sedan	  = carFactory.makeCar();
+		sedan.print();//output Sedan
+	}
+
+}

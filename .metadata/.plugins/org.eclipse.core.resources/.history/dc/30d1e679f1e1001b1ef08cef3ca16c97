@@ -1,0 +1,13 @@
+
+public class ChessGame {
+	GameState gameState;
+	
+	public ChessGame() {
+		this.gameState = initGame();
+	}
+
+	private GameState initGame() {
+
+		return null;
+	}
+}

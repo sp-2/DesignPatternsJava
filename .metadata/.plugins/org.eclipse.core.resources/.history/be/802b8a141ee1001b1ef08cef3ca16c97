@@ -1,0 +1,11 @@
+package strategy;
+
+public interface Sort {
+	public static void swap(int[] arr, int index1, int index2) {
+		 int temp           = items[index1];
+		 items[index1]  = items[index2];
+		 items[index2] = temp;
+	}
+	
+	public void sort(int[] arr);
+}

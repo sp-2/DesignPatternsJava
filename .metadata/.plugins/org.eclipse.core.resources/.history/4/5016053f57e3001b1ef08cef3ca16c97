@@ -1,0 +1,6 @@
+
+public class AutomaticCar {
+	public void start() {
+		
+	}
+}

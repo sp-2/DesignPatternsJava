@@ -1,0 +1,31 @@
+import java.awt.Color;
+
+import javax.swing.JTextArea;
+
+public class MakeTextGreen extends TextDecorator{
+	TextPad textpad;
+	
+	public MakeTextGreen(TextPad textpad) {
+		this.textpad = textpad;
+		//System.out.println("-"+this.textpad.frame.hashCode());
+		System.out.println("hello blue");
+		System.out.println("hello blue textpad "+textpad);
+		Color  blue   = new Color(0, 0, 255);
+		JTextArea textArea = textpad.getJTextArea();
+		System.out.println("hello blue textArea "+textArea.hashCode());
+		textArea.setForeground(Color.GREEN);
+		//this.textpad.textArea.setForeground(Color.BLUE);
+		//this.textpad.frame.setVisible(true);
+	}
+	
+	@Override
+	public String getDescription() {
+		return "Blue Text";
+	}
+	public JTextArea getJTextArea() {
+//		System.out.println("in blue textpad getJTextArea() "+textpad.textArea.hashCode());
+//		return textpad.textArea;
+		System.out.println("in blue textpad getJTextArea() "+textpad.getJTextArea().hashCode());
+		return textpad.getJTextArea();
+	}
+}

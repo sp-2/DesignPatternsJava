@@ -1,0 +1,31 @@
+package factory;
+import MacOSBigSur11;
+import OS;
+import RAM16GB;
+import RetinaScreen;
+import products.AppleM1Chip;
+import products.Memory;
+import products.Processor;
+import products.Screen;
+
+public class MacBookAirFactory implements LaptopFactory{
+	@Override
+	public Processor createProcessor() {
+		return new AppleM1Chip();
+	}
+
+	@Override
+	public OS createOS() {
+		return new MacOSBigSur11();
+	}
+
+	@Override
+	public Screen createScreen() {
+		return new RetinaScreen();
+	}
+
+	@Override
+	public Memory createMemory() {
+		return new RAM16GB();
+	}
+}

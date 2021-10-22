@@ -1,0 +1,11 @@
+package subjects;
+
+import observers.Observer;
+
+public interface StockExchangeSubject1 {
+	public void subscribe(Observer observer) {};
+	
+	public void unSubscribe(Observer observer) {};
+	
+	public void notifyObservers() {};
+}

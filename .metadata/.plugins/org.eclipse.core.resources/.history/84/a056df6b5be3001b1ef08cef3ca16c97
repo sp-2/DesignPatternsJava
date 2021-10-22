@@ -1,0 +1,33 @@
+
+public class AutomaticCar {
+	public void start() {
+		System.out.println("Starting automatic car");
+		System.out.println("Push brake down");
+		System.out.println("Set gear to Nuetral");//check
+		System.out.println("Turn key");
+		System.out.println("Started car");
+	}
+	
+	public void startMovingForward() {
+		System.out.println("Change gear to D");
+		System.out.println("Release brake");
+		System.out.println("Car moving forward");
+		accelerate();
+	}
+	
+	public void reverse() {
+		System.out.println("Change gear to Reverse");
+		System.out.println("Pressing gas pedal");
+		System.out.println("Car reversing");
+	}
+	
+	public void accelerate() {
+		System.out.println("Pressing gas pedal to accelerate");
+	}
+	
+	public void decelearte() {
+		System.out.println("Releasing gas pedal to decelearte");
+	}
+	
+	public 
+}

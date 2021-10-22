@@ -1,0 +1,7 @@
+
+public class RetinaScreen implements Screen {
+	@Override
+	public void print() {
+		System.out.println("RetinaScreen");
+	}
+}

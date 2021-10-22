@@ -1,0 +1,9 @@
+import java.awt.*;
+import javax.swing.*;
+
+import javax.imageio.*;
+public class Test {
+public static void main(String[] args) {
+	ImageFrame frame = new ImageFrame();
+}
+}

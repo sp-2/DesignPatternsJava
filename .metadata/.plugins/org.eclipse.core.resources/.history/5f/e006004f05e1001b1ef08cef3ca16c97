@@ -1,0 +1,65 @@
+
+public class QuickSortHoare {
+	
+	public static void swap(int[] items, int firstIndex, int secondIndex) {
+		 int temp = items[firstIndex];
+		 items[firstIndex] = items[secondIndex];
+		 items[secondIndex] = temp;
+	}
+	
+	public static void quickSortHoare(int[] items) {
+		quickSortHoareH(items, 0, items.length-1);
+	}
+	
+	public static void quickSortHoareH(int[] items, int start, int end) {
+		
+		if(start>=end) {return;}
+		
+		
+		System.out.println();
+		for(int i1 = 0; i1< items.length; i1++) {
+			System.out.print(items[i1]+" ");
+		}
+		int pivot = partitionHoare(items, start, end);
+		System.out.println("\npivot"+pivot);
+		quickSortHoareH(items, start, pivot-1);
+		quickSortHoareH(items, pivot, end);
+	
+	}
+	
+	public static int partitionHoare(int[] items, int start, int end) {
+			
+			int pivot = start + (end-start)/2;
+	
+			int i = start;
+			int j = end;
+	
+			while(i<=j) {
+				//while(items[i] < items[pivot]  && i<end || i==pivot) { i++;}
+				//while(items[j] > items[pivot] || j==pivot && j>start) { j--;}	
+				while(items[i] < items[pivot]   && i<=end ) { i++;}
+				while(items[j] > items[pivot] && j>=start) { j--;}	
+				
+				if(i<=j) {
+					swap(items, i++, j--);
+				}
+			}
+//			i=i>end?end:i;
+//			if(i<=pivot || (i>pivot&&items[i]<=items[pivot])) {
+//				//works but not correct on return of i,or correct but pivot is different?
+//				swap(items, i, pivot);
+//			}
+	
+			return i;
+		}
+		
+
+	public static void main(String[] args) {
+		int[] a2= {8, 7, 6, 6, 6, 5, -1, 11, -11, 3, 2, 2, 1};
+		quickSortHoare(a2);//[1, 2, 2, 3, 5, 6, 6, 6, 7, 8]
+		System.out.println();
+		for(int i1 = 0; i1< a2.length; i1++) {
+			System.out.print(a2[i1]+" ");
+		}
+	}
+	}

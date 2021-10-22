@@ -1,0 +1,9 @@
+
+public class GameState {
+	String[][] board;
+	String Player;
+	
+	public GameState(String[][] board, String Player) {
+		
+	}
+}

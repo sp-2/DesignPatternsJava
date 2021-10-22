@@ -1,0 +1,48 @@
+package strategy;
+
+public class BubbleSort implements Sort{
+
+	@Override
+	public void sort(int[] arr) {
+		// TODO Auto-generated method stub
+		bubbleSort(arr);
+	}
+	
+	public static int[] bubbleSort(int[] items) {
+		
+		int len = items.length - 1;
+		boolean isSorted = false;
+		
+		while(!isSorted) {
+			isSorted=true;
+			for(int j=0; j < len ; j++) { 
+				if(items[j] > items[j+1]) {
+					swap(items, j, j+1);
+					isSorted=false;
+				}
+			}
+			len--;
+		}
+		
+		return items;
+	}
+
+//	public static void swap(int[] items, int firstIndex, int secondIndex) {
+//		 int temp           = items[firstIndex];
+//		 items[firstIndex]  = items[secondIndex];
+//		 items[secondIndex] = temp;
+//	}
+	
+	public static void main(String[] args) {
+		
+		int[] arr = {2,88,22,67,0};
+		int[] sol = BubbleSort.sort(arr);
+		
+		for(int i = 0; i< sol.length; i++) {
+			System.out.print(sol[i]+" ");
+		}
+	}
+
+
+
+}

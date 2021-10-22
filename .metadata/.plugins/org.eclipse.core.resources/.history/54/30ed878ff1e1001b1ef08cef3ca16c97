@@ -1,0 +1,20 @@
+
+public class ChessGame {
+	GameState gameState;
+	
+	public ChessGame() {
+		this.gameState = initGame();
+	}
+
+	private GameState initGame() {
+		String [][] board  ={ {"br","bk","bb","bq","bK","bb","bk","br"},
+				  			  {"bp","bp","bp","bp","bp","bp","bp","bp"},
+				  			  {"--","--","--","--","--","--","--","--"},
+				  			  {"--","--","--","--","--","--","--","--"},
+				  			  {"--","--","--","--","--","--","--","--"},
+				  			  {"--","--","--","--","--","--","--","--"},
+				  			  {"wp","wp","wp","wp","wp","wp","wp","wp"},
+				  			  {"wr","wk","wb","wq","wK","wb","wk","wr"}};
+		return board;
+	}
+}

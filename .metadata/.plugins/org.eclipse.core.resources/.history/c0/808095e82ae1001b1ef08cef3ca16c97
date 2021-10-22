@@ -1,0 +1,9 @@
+package strategy;
+
+public class DataSorterB extends DataSorter{
+
+	public DataSorterB(Sort sort) {
+		super(sort);
+	}
+
+}

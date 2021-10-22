@@ -1,0 +1,13 @@
+package strategy;
+
+public abstract class DataSorter {
+	Sort sort;
+	
+	public DataSorter(Sort sort) {
+		this.sort = sort;
+	}
+	
+	public setSortStrategy(Sort sort) {
+		this.sort = sort;
+	}
+}

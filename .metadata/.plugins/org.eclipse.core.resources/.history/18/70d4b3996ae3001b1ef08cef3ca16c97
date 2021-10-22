@@ -1,0 +1,14 @@
+
+public class TestClass {
+
+	
+	public static void main(String[] args) {
+		UKTemperature ukTemperature = new UKTemperature();
+		
+		USTemperature usTemperature = new USTemperature();
+		
+		//wrap usTemperature in a FahrenheitAdapter
+		
+		
+	}
+}

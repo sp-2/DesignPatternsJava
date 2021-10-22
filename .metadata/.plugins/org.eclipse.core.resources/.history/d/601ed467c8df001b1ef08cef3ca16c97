@@ -1,0 +1,7 @@
+
+public class Compact {
+	@Override
+	public void print() {
+		System.out.println("Compact");
+	}
+}

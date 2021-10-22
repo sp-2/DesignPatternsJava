@@ -1,0 +1,62 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class PlayGame {
+public static void main(String[] args) {
+		
+		List<String[][]> o =new ArrayList<>();
+		
+		String [][] board  ={ {"br","bk","bb","bq","bK","bb","bk","br"},
+							  {"bp","bp","bp","bp","bp","bp","bp","bp"},
+							  {"--","--","--","--","--","--","--","--"},
+							  {"--","--","--","--","--","--","--","--"},
+							  {"--","--","--","--","--","--","--","--"},
+							  {"--","--","--","--","--","--","--","--"},
+							  {"wp","wp","wp","wp","wp","wp","wp","wp"},
+							  {"wr","wk","wb","wq","wK","wb","wk","wr"}};
+		
+		
+		
+		for(int i = 0; i< 8; i++) {
+			System.out.print(8-i+" ");
+			for(int j = 0; j< 8; j++) {		
+				System.out.print(board[i][j]+" ");
+			}
+			System.out.println();
+		}
+		System.out.print("  ");
+		for(int j = 65; j< 73; j++) {	
+			System.out.print(" ");
+			System.out.print((char)j);
+			System.out.print(" ");
+		}
+		
+		o.add(board);
+		
+		board[0][0] = "QQ";
+		
+		o.add(board);
+		
+		String[][] b = o.remove(o.size()-1);
+		printBoard(b);
+		b = o.remove(o.size()-1);
+		printBoard(b);
+		
+		
+}
+public static void printBoard(String[][] board) {
+	for(int i = 0; i< 8; i++) {
+		System.out.print(8-i+" ");
+		for(int j = 0; j< 8; j++) {		
+			System.out.print(board[i][j]+" ");
+		}
+		System.out.println();
+	}
+	System.out.print("  ");
+	for(int j = 65; j< 73; j++) {	
+		System.out.print(" ");
+		System.out.print((char)j);
+		System.out.println(" ");
+	}
+}
+}

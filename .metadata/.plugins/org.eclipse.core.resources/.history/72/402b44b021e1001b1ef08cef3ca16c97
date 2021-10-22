@@ -1,0 +1,49 @@
+package strategy;
+
+public class QuickSortLamuto {
+	public static void swap(int[] items, int firstIndex, int secondIndex) {
+		 int temp = items[firstIndex];
+		 items[firstIndex] = items[secondIndex];
+		 items[secondIndex] = temp;
+	}
+	
+	
+	public static void quickSortLamuto(int[] items) {
+		quickSortLamutoH(items, 0, items.length-1);
+	}
+	
+	public static void quickSortLamutoH(int[] items, int start, int end) {//ok
+	
+		if(start>=end) {return;}
+		
+		int pivot = partitionLamuto(items, start, end);
+	
+		quickSortLamutoH(items, start, pivot-1);
+		quickSortLamutoH(items, pivot+1, end);
+	
+	}
+	
+	public static int partitionLamuto(int[] items, int start, int end) {//ok
+			
+			int pivot = items[end];
+			
+			int i = start;
+					
+			for(int j=start; j<end; j++) {
+				if(items[j]<pivot){swap(items, i, j);i++;}			
+			}
+			
+			swap(items, i, end);
+			
+			return i;
+		}
+	
+
+	public static void main(String[] args) {
+		Sort b = new BubbleSort();
+		int[] arr = {8, 7, 6, 6, 6, 5, -1, 11, -11, 3, 2, 2, 1};
+		b.sort(arr);
+		Print.print(arr);
+	}
+
+}

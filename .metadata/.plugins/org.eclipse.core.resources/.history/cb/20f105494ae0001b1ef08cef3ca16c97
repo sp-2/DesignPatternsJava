@@ -1,0 +1,18 @@
+
+public class TestClass {
+
+	public static void main(String[] args) {
+		LaptopStore dellLaptopStore =new DellLaptopStore();
+		
+		Laptop dellLaptop = dellLaptopStore.orderLaptop();
+		
+		dellLaptop.details();
+		
+		LaptopStore macLaptopStore =new MacBookAirLaptopStore();
+		
+		Laptop macLaptop = macLaptopStore.orderLaptop();
+		
+		macLaptop.details();
+	}
+
+}

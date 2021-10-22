@@ -1,0 +1,21 @@
+
+public class Test {
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Integer i = new Integer(10);
+		Integer j = new Integer(10);
+		swap(i,j);
+		System.out.print(i+" == "+j);
+	}
+
+	private static void swap(Integer i, Integer j) {
+		// TODO Auto-generated method stub
+		Integer temp = new Integer(10);
+		i=j; j=temp;
+		
+		System.out.print(i+" == "+j);
+	}
+
+}

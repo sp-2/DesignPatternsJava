@@ -1,0 +1,5 @@
+
+public class StockExchangeSubject {
+
+		List<Observer> observers = new ArrayList<>();
+}

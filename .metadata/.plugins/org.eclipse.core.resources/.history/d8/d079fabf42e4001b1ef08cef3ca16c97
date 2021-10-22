@@ -1,0 +1,23 @@
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.JTextArea;
+
+public class AddOrangeBackGround extends TextDecorator{
+	TextPad textpad;
+	
+	public AddOrangeBackGround(TextPad textpad) {
+		this.textpad = textpad;
+		JTextArea textArea = textpad.getJTextArea();
+		textArea.setBackground(Color.ORANGE);
+	}
+	
+	@Override
+	public String getDescription() {
+		return textpad.getDescription()+",with Orange Back Ground";
+	}
+	
+	public JTextArea getJTextArea() {
+		return textpad.getJTextArea();
+	}
+}

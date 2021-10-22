@@ -1,0 +1,42 @@
+import java.awt.*;
+import javax.swing.*;
+
+
+//import java.awt.I
+//import javax.imageio.*;
+//import java.io.*;
+
+import java.awt.event.*;
+
+public class Test {
+public static void main(String[] args) {
+	JFrame frame = new JFrame("frame");
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	frame.setBounds(500,500,500,500);
+	
+	Font  f1  = new Font(Font.SERIF, Font.PLAIN,  50);
+	Font  f2  = new Font(Font.SANS_SERIF,  Font.BOLD, 10);
+	Font  f4  = new Font(Font.DIALOG_INPUT,  Font.BOLD|Font.ITALIC, 15);
+	
+	Font  f11  = new Font(Font.SERIF, Font.PLAIN,  10);
+	Color  green   = new Color(0, 255,  0);
+	Color  blue   = new Color(0, 0, 255);
+	Color  red  = new Color(255, 0, 0);
+	textField.setForeground(Color.BLUE);
+	textField.setBackground(Color.YELLOW);
+	JScrollBar sb1  = new JScrollBar();
+	frame.add(sb1);
+	//Font  f12  = new Font(Font.BOLD);
+	//Font.BOLD
+	JTextField textField = new JTextField(50);
+	
+	frame.add(textField);
+	textField.setFont(f4);
+	textField.setFont(f1);
+	textField.setForeground(red);
+	//label.setFont(f2);
+	//label.setForeground(fg);
+	frame.pack();
+	frame.setVisible(true);
+}
+}

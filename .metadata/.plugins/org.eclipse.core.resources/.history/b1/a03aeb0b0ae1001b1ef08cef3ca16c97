@@ -1,0 +1,27 @@
+import java.util.Arrays;
+
+public class MergeSort {
+	
+	
+		
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	
+
+//	int[] items = {2,88,22,67,0};
+//	int[] sol = mergeSort(items);
+//	
+//	for(int i = 0; i< sol.length; i++) {
+//		System.out.print(sol[i]+" ");
+//	}
+	
+	//int[] items = {2,88,22,67,0};
+	int[] items = {2,88,22,67,0, 1, 1,6,5,12,2,22,11,55,101};
+	int[] sol = mergeSort2(items, 0, items.length-1);
+	
+	for(int i = 0; i< sol.length; i++) {
+		System.out.print(sol[i]+" ");
+	}
+}
+}

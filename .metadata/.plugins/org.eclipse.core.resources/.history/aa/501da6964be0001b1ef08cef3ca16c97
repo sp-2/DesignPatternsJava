@@ -1,0 +1,10 @@
+package factory;
+import Car;
+import Compact;
+
+public class CompactFactory extends CarFactory {
+	@Override
+	public Car makeCar() {
+		return new Compact();
+	}
+}

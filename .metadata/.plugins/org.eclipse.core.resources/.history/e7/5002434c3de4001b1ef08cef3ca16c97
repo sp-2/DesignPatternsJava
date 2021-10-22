@@ -1,0 +1,44 @@
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.FilterInputStream;
+import java.io.LineNumberInputStream;
+
+public class TestClass {
+	public static void main(String[] args) {
+		
+		TextPad spA = new TextPad();
+		System.out.println("in main TextPad "+spA);
+		spA.initFrame();
+		spA = new MakeTextBlue(spA);
+		System.out.println("in main MakeTextBlue "+spA);
+		spA = new MakeTextBold(spA);
+		System.out.println("in main MakeTextBold "+spA);
+		spA = new AddPinkBackGround(spA);
+		
+		
+		TextPad sp2 = new TextPad();
+		System.out.println("in main TextPad "+spA);
+		sp2.initFrame();
+		//sp2 = new MakeTextBlue(sp2);
+		//System.out.println("in main MakeTextBlue "+spA);
+		sp2 = new MakeTextBold(sp2);
+		System.out.println("in main MakeTextBold "+spA);
+		sp2 = new AddPinkBackGround(sp2);
+		
+		//spA = new AddPinkBackGround(new MakeTextBold(new MakeTextBlue(spA)));
+		
+	//	FileInputStream ff= new FileInputStream();
+		//FilterInputStream ff= new FilterInputStream();
+	//	BufferedInputStream ff= new BufferedInputStream();
+	}
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+
+public class AutomaticCar {
+	public void start() {
+		System.out.println("Turning key");
+		System.out.println("Starting car");
+	}
+}

@@ -1,0 +1,13 @@
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Fidelity {
+	Map<String,List<StockData>> StockDataList = null;
+	
+	public Fidelity() {
+		StockDataList = new HashMap<>();
+	}
+	
+	
+}

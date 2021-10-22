@@ -1,0 +1,8 @@
+
+public class GameMemento {
+	GameState gameState;
+	
+	public GameMemento(GameState gameState) {
+		
+	}
+}

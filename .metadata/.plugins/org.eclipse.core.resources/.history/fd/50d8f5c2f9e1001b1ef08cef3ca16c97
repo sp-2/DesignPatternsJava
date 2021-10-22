@@ -1,0 +1,59 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class PlayGame {
+public static void main(String[] args) {
+		
+		List<GameMemento> savedGameState =new ArrayList<>();
+		
+//		String [][] board  ={ {"br","bk","bb","bq","bK","bb","bk","br"},
+//							  {"bp","bp","bp","bp","bp","bp","bp","bp"},
+//							  {"--","--","--","--","--","--","--","--"},
+//							  {"--","--","--","--","--","--","--","--"},
+//							  {"--","--","--","--","--","--","--","--"},
+//							  {"--","--","--","--","--","--","--","--"},
+//							  {"wp","wp","wp","wp","wp","wp","wp","wp"},
+//							  {"wr","wk","wb","wq","wK","wb","wk","wr"}};
+//		
+		
+		
+//		printBoard(board);
+//		savedGameState.add(cloneBoard(board));
+//		
+//		board[0][0] = "QQ";
+//		
+//		savedGameState.add(cloneBoard(board));
+//		
+//		String[][] b = savedGameState.remove(savedGameState.size()-1);
+//		printBoard(b);
+//		b = savedGameState.remove(savedGameState.size()-1);
+//		printBoard(b);
+		
+		ChessGame chessGame = new ChessGame();
+		chessGame.printBoard();
+		
+		chessGame.makeMove(6, 4, 4, 4, "wp", "Player1");
+		chessGame.printBoard();
+		
+		
+		savedGameState.add(chessGame.getCurrentState());
+		
+		chessGame.makeMove(1, 4, 3, 4, "wp", "Player2");
+		chessGame.printBoard();
+		
+		savedGameState.add(chessGame.getCurrentState());
+		
+		chessGame.makeMove(6, 3, 4, 3, "wp", "Player1");
+		chessGame.printBoard();
+		
+		chessGame.restoreState(savedGameState.remove(savedGameState.size()-1));
+		chessGame.printBoard();
+		
+		
+}
+
+
+
+
+}

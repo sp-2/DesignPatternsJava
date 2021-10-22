@@ -1,0 +1,13 @@
+
+public class ChessGame {
+	GameState gameState;
+	
+	public ChessGame() {
+		this.gameState = initGame();
+	}
+
+	private GameState initGame() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

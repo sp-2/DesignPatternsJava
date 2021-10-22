@@ -1,0 +1,6 @@
+
+public class DellLaptopStore extends LaptopStore{
+	public Laptop orderLaptop() {
+		
+	}
+}

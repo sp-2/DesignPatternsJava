@@ -1,0 +1,34 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class PlayGame {
+public static void main(String[] args) {
+		
+		List<GameMemento> savedGameState = new ArrayList<>();
+		
+		ChessGame chessGame = new ChessGame();
+		chessGame.printBoard();
+		
+		chessGame.makeMove(6, 4, 4, 4, "wp", "Player1");
+		chessGame.printBoard();
+		
+		savedGameState.add(chessGame.getCurrentState());
+		
+		chessGame.makeMove(1, 4, 3, 4, "wp", "Player2");
+		chessGame.printBoard();
+		
+		savedGameState.add(chessGame.getCurrentState());
+		
+		chessGame.makeMove(6, 3, 4, 3, "wp", "Player1");
+		chessGame.printBoard();
+		
+		//undo move
+		System.out.print("Undo last move:");
+		chessGame.restoreState(savedGameState.remove(savedGameState.size()-1));
+		chessGame.printBoard();
+		
+		System.out.print("Undo move:");
+		chessGame.restoreState(savedGameState.remove(savedGameState.size()-1));
+		chessGame.printBoard();				
+	}
+}

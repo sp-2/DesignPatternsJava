@@ -1,0 +1,13 @@
+
+public class TsetClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StockExchangeSubject nasdaq = new Nasdaq();
+		Fidelity fidelity = new Fidelity();
+		nasdaq.subscribe(fidelity);
+		
+		StockData stockData = new StockData("Apple","AAPL", 142.0, 100000, );
+	}
+
+}

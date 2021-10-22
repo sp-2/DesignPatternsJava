@@ -1,0 +1,10 @@
+
+public class MakeTextBold extends TextDecorator{
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

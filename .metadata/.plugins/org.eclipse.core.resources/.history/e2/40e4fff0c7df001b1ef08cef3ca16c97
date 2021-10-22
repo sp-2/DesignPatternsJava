@@ -1,0 +1,9 @@
+
+public class SedanFactory extends CarFactory{
+
+	@Override
+	protected Car makeCar() {
+		return new Sedan();
+	}
+	
+}

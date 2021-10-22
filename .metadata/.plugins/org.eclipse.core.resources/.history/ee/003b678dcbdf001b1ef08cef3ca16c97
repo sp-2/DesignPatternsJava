@@ -1,0 +1,23 @@
+
+public class DellFactory implements LaptopFactory{
+
+	@Override
+	public Processor createProcessor() {
+		return new IntelCorei5();
+	}
+
+	@Override
+	public OS createOS() {
+		return new Windows10OS();
+	}
+
+	@Override
+	public Screen createScreen() {
+		return new TouchScreen();
+	}
+
+	@Override
+	public Memory createMemory() {
+		return new GBRAM();
+	}
+}

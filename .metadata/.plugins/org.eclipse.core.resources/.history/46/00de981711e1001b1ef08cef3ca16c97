@@ -1,0 +1,127 @@
+
+public class QuickSortHoare {
+	
+	public static void swap(int[] items, int firstIndex, int secondIndex) {
+		 int temp = items[firstIndex];
+		 items[firstIndex] = items[secondIndex];
+		 items[secondIndex] = temp;
+	}
+	
+	public static void quickSortHoare(int[] items) {
+		quickSortHoareH(items, 0, items.length-1);
+	}
+	
+	public static void quickSortHoareH(int[] items, int start, int end) {
+		
+		if(start>=end) {return;}
+		
+		
+		System.out.println();
+		for(int i1 = 0; i1< items.length; i1++) {
+			System.out.print(items[i1]+" ");
+		}
+		int pivot = partitionHoare(items, start, end);
+		System.out.println("\npivot "+pivot);
+		if(start<pivot-1) {
+		quickSortHoareH(items, start, pivot-1);}
+		if(pivot<end) {
+		quickSortHoareH(items, pivot, end);}
+	
+	}
+	
+	public static int partitionHoare(int[] items, int start, int end) {
+			
+			//int pivot = start + (end-start)/2;
+			int pivot = (start + end)/2;
+			int i = start;
+			int j = end;
+			System.out.println("\nstart "+start+" end "+end);
+			//while(i<=j) {
+			while(true) {
+				//while(items[i] < items[pivot]  && i<end || i==pivot) { i++;}
+				//while(items[j] > items[pivot] || j==pivot && j>start) { j--;}	
+				while(items[i] < items[pivot]  ) { i++;}
+				while(items[j] > items[pivot] ) { j--;}	
+				
+//				if(i<=j) {
+//					swap(items, i, j);i++;j--;
+//				}
+				if(i>=j) {
+					return j;
+				}
+				swap(items, i, j);//i++;j--;
+			}
+//			i=i>end?end:i;
+//			if(i<=pivot || (i>pivot&&items[i]<=items[pivot])) {
+//				//works but not correct on return of i,or correct but pivot is different?
+//				swap(items, i, pivot);
+//			}
+		//	return i;
+		}
+		
+
+	
+	static int partition(int[] arr, int low, int high)
+    {
+        int pivot = arr[low];
+        int i = low - 1, j = high + 1;
+ 
+        while (true) {
+            // Find leftmost element greater
+            // than or equal to pivot
+            do {
+                i++;
+            } while (arr[i] < pivot);
+ 
+            // Find rightmost element smaller
+            // than or equal to pivot
+            do {
+                j--;
+            } while (arr[j] > pivot);
+ 
+            // If two pointers met.
+            if (i >= j)
+                return j;
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            // swap(arr[i], arr[j]);
+        }
+    }
+ 
+    /* The main function that
+       implements QuickSort
+    arr[] --> Array to be sorted,
+    low --> Starting index,
+    high --> Ending index */
+    static void quickSort(int[] arr, int low, int high)
+    {
+        if (low < high) {
+            /* pi is partitioning index,
+            arr[p] is now at right place */
+            int pi = partition(arr, low, high);
+ 
+            // Separately sort elements before
+            // partition and after partition
+            quickSort(arr, low, pi);
+            quickSort(arr, pi + 1, high);
+        }
+    }
+ 
+    /* Function to print an array */
+    static void printArray(int[] arr, int n)
+    {
+        for (int i = 0; i < n; i++)
+            System.out.print(" " + arr[i]);
+        System.out.println();
+    }
+	public static void main(String[] args) {
+		int[] a2= {8, 7, 6, 6, 6, 5, -1, 11, -11, 3, 2, 2, 1};
+		//quickSort(a2,0,a2.length-1);//[1, 2, 2, 3, 5, 6, 6, 6, 7, 8]
+		quickSortHoare(a2);
+		System.out.println();
+		for(int i1 = 0; i1< a2.length; i1++) {
+			System.out.print(a2[i1]+" ");
+		}
+	}
+	}

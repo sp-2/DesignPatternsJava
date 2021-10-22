@@ -1,0 +1,7 @@
+
+public class MacOSBigSur11 implements OS {
+	@Override
+	public String print() {
+		return "MacOS Big Sur 11.0";
+	}
+}

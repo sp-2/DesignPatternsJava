@@ -1,0 +1,8 @@
+import factory.CarFactory;
+
+public class SedanFactory extends CarFactory{
+	@Override
+	public Car makeCar() {
+		return new Sedan();
+	}	
+}

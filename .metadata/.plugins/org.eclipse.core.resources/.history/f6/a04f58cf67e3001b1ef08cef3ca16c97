@@ -1,0 +1,9 @@
+
+public class USTemperature  implements FahrenheitTemperature{
+
+	@Override
+	public double getCelsiusTemperature(double kelvin) {
+		return kelvin - 273.15;
+	}
+
+}

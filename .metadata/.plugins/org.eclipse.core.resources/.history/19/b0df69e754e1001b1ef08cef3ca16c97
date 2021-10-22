@@ -1,0 +1,25 @@
+import java.awt.Color;
+import java.awt.Font;
+
+public class MakeTextBold extends TextDecorator{
+
+	TextPad textpad;
+	
+	public MakeTextBold(TextPad textpad) {
+		this.textpad = textpad;
+		System.out.println("-"+this.textpad.frame.hashCode());
+		Color  blue   = new Color(0, 0, 255);
+		Font  f  = new Font(Font.SERIF, Font.PLAIN,  50);
+		this.textpad.frame.setName("deci");
+		this.textpad.frame.setForeground(blue);
+		System.out.println(this.textpad.frame.getComponent(0));
+		this.textpad.textArea.setFont(f);
+		//this.textpad.frame.getComponent(0).
+		this.textpad.frame.setVisible(true);
+	}
+	
+	@Override
+	public String getDescription() {
+		return "Bold";
+	}
+}

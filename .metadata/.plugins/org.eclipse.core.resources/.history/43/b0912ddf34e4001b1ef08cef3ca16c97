@@ -1,0 +1,10 @@
+import javax.swing.JTextArea;
+
+public abstract class TextDecorator extends TextPad{
+	//TextPad textpad;
+	
+	public abstract String getDescription();
+	public JTextArea getJTextArea() {
+		return super(textArea);
+	}
+}

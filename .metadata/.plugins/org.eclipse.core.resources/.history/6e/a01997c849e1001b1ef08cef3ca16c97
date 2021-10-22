@@ -1,0 +1,10 @@
+
+public class WithItalics extends TextDecorator{
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return "Italics";
+	}
+
+}

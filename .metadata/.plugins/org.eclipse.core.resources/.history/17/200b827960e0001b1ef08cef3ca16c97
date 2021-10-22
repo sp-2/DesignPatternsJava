@@ -1,0 +1,13 @@
+
+public class TestClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SinglePatternEagerLoading singleInstance1 = SinglePatternEagerLoading.getInstance();
+		SinglePatternEagerLoading singleInstance2 = SinglePatternEagerLoading.getInstance();
+		
+		System.out.println(singleInstance1);
+		System.out.println(singleInstance2);
+	}
+
+}

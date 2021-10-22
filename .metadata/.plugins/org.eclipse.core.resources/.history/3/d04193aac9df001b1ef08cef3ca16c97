@@ -1,0 +1,28 @@
+
+public class DellFactory implements LaptopFactory{
+
+	@Override
+	public Processor createProcessor() {
+		// TODO Auto-generated method stub
+		return new IntelCorei5();
+	}
+
+	@Override
+	public OS createOS() {
+		// TODO Auto-generated method stub
+		return new Windows10OS();
+	}
+
+	@Override
+	public Screen createScreen() {
+		// TODO Auto-generated method stub
+		return new TouchScreen();
+	}
+
+	@Override
+	public Memory createMemory() {
+		// TODO Auto-generated method stub
+		return new 16GB();
+	}
+
+}

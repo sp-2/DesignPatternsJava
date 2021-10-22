@@ -1,0 +1,34 @@
+
+public class QuickSortLamuto {
+
+public static int partitionLamuto(int[] items, int start, int end) {//ok
+		
+		int pivot = items[end];//lomuto partioning scheme
+		
+		int i = start;
+				
+		for(int j=start; j<end; j++) {
+			if(items[j]<pivot){swap(items, i, j);i++;}			
+		}
+		
+		swap(items, i, end);
+		
+		return i;
+	}
+	
+public static void quickSortLamuto(int[] items, int start, int end) {//ok
+
+	if(end<=start) {return;}
+	
+	int pivot = partitionLamuto(items, start, end);
+
+	quickSortLamuto(items, start, pivot-1);
+	quickSortLamuto(items, pivot+1, end);
+
+}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

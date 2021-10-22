@@ -1,0 +1,8 @@
+
+public class ScratchPad extends TextPad{
+	public ScratchPad(String description) {
+		//super();
+		this.description = description;
+	}
+	
+}

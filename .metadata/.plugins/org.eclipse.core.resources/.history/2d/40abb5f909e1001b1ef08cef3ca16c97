@@ -1,0 +1,143 @@
+import java.util.Arrays;
+
+public class MergeSort {
+	
+	public static int[] mergeSort(int[] items) {
+		if(items.length==1) {
+			return items;
+		}
+
+		int mid = items.length/2;
+		
+		int[] arrayL = mergeSort(Arrays.copyOfRange(items, 0, mid));
+		int[] arrayR = mergeSort(Arrays.copyOfRange(items, mid, items.length));
+		
+		return merge(arrayL,arrayR);
+	}
+	
+	public static int[] merge(int[] itemsL, int[] itemsR) {
+		int[] result = new int[itemsL.length + itemsR.length];
+		
+		for(int i=0, L=0, R=0; i<result.length;i++) {
+			
+			if(L>itemsL.length-1) {result[i] = itemsR[R++];}
+			else if(R>itemsR.length-1) {result[i] = itemsL[L++];}
+			else if(itemsL[L]<itemsR[R]) {
+				result[i] = itemsL[L++];
+			} else {
+				result[i] = itemsR[R++];
+			}
+		}
+		
+		return result;		
+	}
+	//merge sort on same array in sort fn
+	public static int[] mergeSort2(int[] items, int start, int end) {
+		if(end <= start) {
+			return items;
+		}
+
+		int middle = start +  (end-start)/2;
+		
+		mergeSort2(items, start, middle);
+		mergeSort2(items, middle+1, end);
+		
+		return merge2(items, start, middle, end);
+	}
+	
+	public static int[] merge2(int[] items, int start, int middle, int end) {
+		int[] result = new int[end-start+1];
+		
+		for(int i=0, L=start, R=middle+1; i<result.length;i++) {
+			if(L>middle) {result[i] = items[R++];}
+			else if(R>end) {result[i] = items[L++];}
+			else if(items[L]<items[R]) {
+				result[i] = items[L++];
+			} else {
+				result[i] = items[R++];
+			}
+		}
+		
+		for(int i=start, j=0; j<result.length; i++,j++) {
+			items[i] = result[j];
+		}
+
+		return items;		
+	}
+	
+	
+//code signal m s
+	public static void merge1(int[] sequence, int left, int middle, int right) {
+		  int[] result = new int[right - left];
+		  int i, j;
+		  int k = 0;
+
+		  for (i = left, j = middle; i < middle && j < right; ) {
+		    if (sequence[i] < sequence[j]) {
+		      result[k++] = sequence[i];
+		      i++;
+		    }
+		    else {
+		      result[k++] = sequence[j];
+		      j++;
+		    }
+		  }
+
+		  while (i < middle) {
+		    result[k++] = sequence[i];
+		    i++;
+		  }
+
+		  while (j < right) {
+		    result[k++] = sequence[j];
+		    j++;
+		  }
+
+		  for (i = left; i < right; i++) {
+		    sequence[i] = result[i - left];
+		  }
+		}
+
+		public static void split(int[] sequence, int left, int right) {
+		  //...
+			//System.out.println("left "+left+" r "+right);
+			if(left>=right-1) {return;}
+			
+		  int middle = (left + right) / 2;
+		  
+		 
+		  System.out.println("left "+left+" r "+right);
+		  System.out.println("middle "+middle);
+		 
+		  split(sequence, left, middle);
+		  split(sequence, middle, right);
+		  merge1(sequence, left, middle, right);
+		}
+
+		public static int[] mergeSort1(int[] sequence) {
+		  split(sequence, 0, sequence.length);
+
+		  return sequence;
+		}
+		
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	
+
+//	int[] items = {2,88,22,67,0};
+//	int[] sol = mergeSort(items);
+//	
+//	for(int i = 0; i< sol.length; i++) {
+//		System.out.print(sol[i]+" ");
+//	}
+	
+	//int[] items = {2,88,22,67,0};
+	int[] items = {2,88,22,67,0, 1, 1,6,5,12,2,22,11,55,101};
+	int[] sol = mergeSort2(items, 0, items.length-1);
+	
+	for(int i = 0; i< sol.length; i++) {
+		System.out.print(sol[i]+" ");
+	}
+}
+}

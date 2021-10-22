@@ -1,0 +1,22 @@
+
+public class MacBookAirFactory {
+	@Override
+	public Processor createProcessor() {
+		return new AppleM1Chip();
+	}
+
+	@Override
+	public OS createOS() {
+		return new MacOSBigSur11();
+	}
+
+	@Override
+	public Screen createScreen() {
+		return new RetinaScreen();
+	}
+
+	@Override
+	public Memory createMemory() {
+		return new RAM8GB();
+	}
+}

@@ -1,0 +1,71 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class TestClass {
+
+	public static void main(String[] args) {
+		StockExchangeSubject nasdaq   = new Nasdaq();
+		Observer fidelity             = new Fidelity();
+		List<StockData> stockDataList = new ArrayList<StockData>();
+		Scanner scanner               = null;
+		StockData stockData           = null;
+		String[] info;
+  	  	String name;
+  	  	String symbol;
+  	  	Double price;
+  	  	Double volume;
+		
+		nasdaq.subscribe(fidelity);
+		
+		try {
+				File file = new File("/Users/sp/Desktop/DesignPatterns/ObserverDesignPattern/src/data");
+			    scanner   = new Scanner(file);
+
+				while (scanner.hasNextLine()) {
+					String data = scanner.nextLine();
+					info        = data.split(",");
+		        
+					if(info[0].equals("#")) {nasdaq.setData(stockDataList);stockDataList.clear(); continue;}
+		         
+					name      = info[0];
+					symbol    = info[1];
+					price     = Double.parseDouble(info[2]);
+					volume    = Double.parseDouble(info[3]);
+					stockData = new StockData(name,symbol, price, volume, LocalDateTime.now());
+					
+					stockDataList.add(stockData);
+				}
+				
+		    } catch (FileNotFoundException e) {
+		    	e.printStackTrace();
+		    } finally {
+		    	scanner.close();
+		    }
+		  }
+	}
+
+
+/*
+try{
+String nextLine;
+String title = "";
+String department = "";
+int year;
+
+BufferedReader inFile = new BufferedReader(new FileReader(inputName));
+
+while((nextLine = inFile.readLine())!= null){
+
+  title = nextLine.nextLine();
+  department = nextLine.nextLine();
+  year = Integer.parseInt(nextLine);
+  newList.addCourse(new Course(title, department, year));  
+} 
+
+inFile.close();
+}
+*/

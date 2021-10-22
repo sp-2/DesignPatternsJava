@@ -1,0 +1,18 @@
+
+public class MakeTextBlue extends TextDecorator{
+	TextPad textpad;
+	
+	public MakeTextBlue(TextPad textpad) {
+		this.textpad = textpad;
+		//textpad.frame.getC
+		Components[] q = textpad.frame.getComponents();
+		//textpad.textArea.setForeground(red);
+	}
+	
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return "Blue Text";
+	}
+
+}

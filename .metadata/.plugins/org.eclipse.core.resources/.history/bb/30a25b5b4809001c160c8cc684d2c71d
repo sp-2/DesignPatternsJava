@@ -1,0 +1,15 @@
+import java.io.FileInputStream;
+
+public class SingletonWithSerialization {
+	public static void main(String[] args) {
+		Class singleton = SingletonDesignPatternEagerLoading.class;
+		SingletonDesignPatternEagerLoading singleInstance = SingletonDesignPatternEagerLoading.getInstance();
+		
+		System.out.println(singleton);
+		
+		FileInputStream fis = new FileInputStream("a.txt");
+		
+		
+		//System.out.println(singleInstance1);
+	}
+}

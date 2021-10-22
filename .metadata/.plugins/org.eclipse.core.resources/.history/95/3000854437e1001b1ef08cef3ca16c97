@@ -1,0 +1,23 @@
+import java.awt.*;
+import javax.swing.*;
+
+
+//import java.awt.I
+//import javax.imageio.*;
+//import java.io.*;
+
+import java.awt.event.*;
+
+public class Test {
+public static void main(String[] args) {
+	JFrame frame = new JFrame("frame");
+//	frame.setVisible(true);
+	JPanel panel = new JPanel();
+	JButton button = new JButton();
+	frame.add(button);
+	
+	
+	
+	frame.setVisible(true);
+}
+}

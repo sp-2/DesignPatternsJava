@@ -1,0 +1,12 @@
+package factory;
+import Memory;
+import OS;
+import products.Processor;
+import products.Screen;
+
+public interface LaptopFactory {
+	Processor createProcessor();
+	OS createOS();
+	Screen createScreen();
+	Memory createMemory();
+}

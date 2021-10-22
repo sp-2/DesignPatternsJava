@@ -1,0 +1,10 @@
+
+public class MacOSBigSur11 implements OS {
+
+	@Override
+	public void print() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

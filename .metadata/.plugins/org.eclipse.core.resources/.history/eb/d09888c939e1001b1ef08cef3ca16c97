@@ -1,0 +1,27 @@
+import java.awt.*;
+import javax.swing.*;
+
+
+//import java.awt.I
+//import javax.imageio.*;
+//import java.io.*;
+
+import java.awt.event.*;
+
+public class Test {
+public static void main(String[] args) {
+	JFrame frame = new JFrame("frame");
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	frame.setBounds(500,500,200,200);
+	
+	Container contentPane = frame.getContentPane();
+//	JPanel panel = new JPanel();
+	JButton button = new JButton("Button");
+	//frame.add(panel);
+	//frame.add(button);
+	contentPane.add(button);
+	
+	
+	frame.setVisible(true);
+}
+}

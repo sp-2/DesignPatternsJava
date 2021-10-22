@@ -1,0 +1,14 @@
+
+public class MacBookAirLaptop extends Laptop{
+	
+	LaptopFactory laptopFactory;
+	public 
+	 void assembleLaptop() {
+		 name = "MacBook Air";
+		 processor = laptopFactory.createProcessor();
+			 os;
+			   memory;
+			    screen;
+	 }
+	 
+}

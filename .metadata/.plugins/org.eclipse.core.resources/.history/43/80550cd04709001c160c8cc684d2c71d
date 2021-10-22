@@ -1,0 +1,12 @@
+
+public class SIngletonWithReflection {
+
+	public static void main(String[] args) {
+		Class singleton = SingletonDesignPatternEagerLoading.class;
+		SingletonDesignPatternEagerLoading singleInstance1 = SingletonDesignPatternEagerLoading.getInstance();
+		
+		System.out.println(singleInstance2);
+		System.out.println(singleInstance2);
+	}
+
+}

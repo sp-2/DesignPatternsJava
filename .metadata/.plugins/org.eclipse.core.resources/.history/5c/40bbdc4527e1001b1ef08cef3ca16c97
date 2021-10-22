@@ -1,0 +1,17 @@
+package strategy;
+
+public class TestClass {
+	public static void main(String[] args) {
+		Sort qsl = new QuickSortLamuto();
+		Sort qs2 = new SelectionSort();
+		
+		DataSorter ds1 = new DataSorterA(qsl);
+		
+		
+		int[] arr = {8, 7, 6, 6, 6, 5, -1, 11, -11, -2, 2, 2, 1};
+		b.sort(arr);
+		Print.print(arr);
+		
+		
+	}
+}

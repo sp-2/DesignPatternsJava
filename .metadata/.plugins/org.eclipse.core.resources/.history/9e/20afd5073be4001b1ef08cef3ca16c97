@@ -1,0 +1,74 @@
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollBar;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public  class TextPad implements TextArea{
+	//JFrame frame = null;
+//	 JFrame frame = new JFrame("frame");
+//	 JPanel panel = new JPanel();
+//	 JTextArea textArea = new JTextArea();
+//	 JScrollBar sb1  = new JScrollBar();
+//	 JButton button = new JButton("Exit");
+	
+	 JFrame frame = null;
+	 JPanel panel = null;
+	 JTextArea textArea = null;
+	 JScrollBar sb1  = null;
+	 JButton button = null;
+	
+	String description = "Text Pad";
+	
+	public TextPad() {
+		//frame = new JFrame("frame");
+		
+		
+		
+		//System.out.println(frame.hashCode());
+		//initFrame();
+		
+		
+	}
+	
+	
+	public JTextArea getJTextArea() {
+		System.out.println("in textpad getJTextArea() "+textArea);
+		return this.textArea;
+	}
+	
+	public String getDescription() {
+		return description;
+	}
+	
+	public void initFrame() {
+		System.out.println("in textpad init");
+		 frame = new JFrame("frame");
+		  panel = new JPanel();
+		  textArea = new JTextArea();
+		  sb1  = new JScrollBar();
+		  button = new JButton("Exit");
+		  System.out.println("in textpad init textArea: "+textArea);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setBounds(500,500,500,500);
+//		JPanel panel = new JPanel();
+//		JScrollBar sb1  = new JScrollBar();
+//		JButton button = new JButton("Exit");
+		button.addActionListener(e->frame.dispose());
+	
+	textArea.setColumns(20);
+	textArea.setForeground(Color.red);
+		
+	panel.add(textArea);
+	panel.add(button);
+	frame.add(panel);
+	//frame.pack();
+	frame.setVisible(true);
+	}
+
+	
+}

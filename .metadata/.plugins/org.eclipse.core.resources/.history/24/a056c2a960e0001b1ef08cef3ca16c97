@@ -1,0 +1,8 @@
+
+public class SingletonDesignPatternLazyLoading {
+	private static SingletonDesignPatternLazyLoading singleInstance = null;
+	
+	public static SingletonDesignPatternEagerLoading getInstance() {
+		return singleInstance;
+	}
+}

@@ -1,0 +1,7 @@
+
+public class IntelCorei5 implements Processor{
+	@Override
+	public void getProcessor() {
+		System.out.println("IntelCorei5");
+	}
+}

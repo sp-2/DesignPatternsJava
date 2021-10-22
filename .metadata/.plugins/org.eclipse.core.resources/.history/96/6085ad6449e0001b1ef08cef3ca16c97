@@ -1,0 +1,7 @@
+
+public class RAM8GB implements Memory {
+	@Override
+	public String getMemory() {
+		return "16GB RAM";
+	}
+}

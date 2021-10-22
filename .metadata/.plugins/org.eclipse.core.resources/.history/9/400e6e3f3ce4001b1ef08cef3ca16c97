@@ -1,0 +1,27 @@
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.JTextArea;
+
+public class AddPinkBackGround extends TextDecorator{
+	TextPad textpad;
+	
+	public AddPinkBackGround(TextPad textpad) {
+		this.textpad = textpad;
+		System.out.println("hello pink");
+		System.out.println("hello pink textpad "+textpad);
+		JTextArea textArea = textpad.getJTextArea();
+		System.out.println("hello bold textArea "+textArea.hashCode());
+		textArea.setBackground(Color.pink);
+	}
+	
+	@Override
+	public String getDescription() {
+		return "Pink BG";
+	}
+	
+	public JTextArea getJTextArea() {
+		System.out.println("in pink textpad getJTextArea() "+textpad.textArea.hashCode());
+		return textpad.textArea;
+	}
+}

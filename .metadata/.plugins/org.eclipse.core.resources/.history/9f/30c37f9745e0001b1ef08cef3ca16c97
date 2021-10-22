@@ -1,0 +1,18 @@
+
+public class DellLaptop extends Laptop{
+
+	LaptopFactory laptopFactory;
+	
+	public MacBookAirLaptop(LaptopFactory laptopFactory) {
+		this.laptopFactory = laptopFactory;
+	}
+	
+	 void assembleLaptop() {
+		 name 		= "MacBook Air";
+		 processor 	= laptopFactory.createProcessor();
+		 os   		= laptopFactory.createOS();
+		 memory 	= laptopFactory.createMemory();
+	     screen 	= laptopFactory.createScreen();
+	 }	 
+}
+

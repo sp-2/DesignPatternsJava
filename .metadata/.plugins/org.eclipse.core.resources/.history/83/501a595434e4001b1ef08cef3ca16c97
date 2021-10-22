@@ -1,0 +1,31 @@
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.JTextArea;
+
+public class MakeTextBold extends TextDecorator{
+
+	TextPad textpad;
+	
+	public MakeTextBold(TextPad textpad) {
+		this.textpad = textpad;
+		System.out.println("hello bold");
+		System.out.println("hello bold"+textpad);
+		//System.out.println("-="+this.textpad.frame.hashCode());
+		Font  f  = new Font(Font.SERIF, Font.BOLD,  50);
+		Font  f2  = new Font(Font.DIALOG_INPUT,  Font.BOLD|Font.ITALIC, 15);
+		Font  f1  = new Font(Font.DIALOG_INPUT,  Font.BOLD, 15);
+		
+		
+		
+		
+		JTextArea textArea = 
+		this.textpad.textArea.setFont(f1);
+		//this.textpad.frame.setVisible(true);
+	}
+	
+	@Override
+	public String getDescription() {
+		return "Bold";
+	}
+}

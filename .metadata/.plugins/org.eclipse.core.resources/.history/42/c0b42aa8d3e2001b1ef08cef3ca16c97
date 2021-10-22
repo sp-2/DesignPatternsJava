@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Fidelity implements Observer{
+	Map<String,List<StockData>> stockDataMap = null;
+	List<StockData> stockDataList = null;
+	
+	public Fidelity() {
+		stockDataMap = new HashMap<>();
+	}
+	
+	public void update(List<StockData> stockDataList) {
+//		for(StockData stockData: stockDataList) {
+//			String symbol = stockData.getSymbol();
+//			List<StockData> listSymbol = new ArrayList<>();
+//			if(stockDataMap.containsKey(symbol)){
+//				listSymbol = stockDataMap.get(symbol);
+//			}
+//			listSymbol.add(stockData);
+//		}
+		
+		this.stockDataList = stockDataList;
+		updateAll();
+	}
+	
+	public void updateAll() {
+		System.out.println("Symbol Name 	Price 	Volume");
+		for(StockData stockData: stockDataList) {
+			System.out.printf("%-5s  %-10s %-5.1f  %-6.1f%n", stockData.getSymbol(), stockData.getName(), stockData.getPrice(), stockData.getVolume());
+		}
+		System.out.println();
+	}
+}
